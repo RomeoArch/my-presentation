@@ -30,6 +30,14 @@
 			color: #ff79c6;
 		}
 
+		.codeforce-logo--small {
+			font-size: 1.4em;
+			position: absolute;
+			top: 0.4em;
+			left: 0.4em;
+			margin: 0;
+		}
+
 		.subtitle {
 			color: #8be9fd;
 			font-weight: 400;
@@ -51,8 +59,8 @@
 	<div class="reveal">
 		<div class="slides">
 			<!-- Title -->
-			<section data-background-gradient="linear-gradient(135deg, #282a36 0%, #44475a 100%)">
-				<h1 class="codeforce-logo">Code<span class="accent">force</span></h1>
+			<section data-background-gradient="linear-gradient(135deg, #282a36 0%, #44475a 100%)" data-auto-animate>
+				<h1 class="codeforce-logo" data-id="codeforce-title">Code<span class="accent">force</span></h1>
 				<h3 class="subtitle">The GenAI Meetup</h3>
 				<p>
 					<small>Edition #1 &middot; Talks, demos &amp; discussions about Generative AI</small>
@@ -60,7 +68,8 @@
 			</section>
 
 			<!-- What is Codeforce -->
-			<section>
+			<section data-auto-animate>
+				<h1 class="codeforce-logo codeforce-logo--small" data-id="codeforce-title">Code<span class="accent">force</span></h1>
 				<h2>What is Codeforce?</h2>
 				<ul>
 					<li class="fragment">A recurring meetup for people building with and curious about
@@ -144,6 +153,10 @@
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
+
+			// Scroll-driven navigation: move through slides by scrolling down,
+			// no horizontal "next slide" paging.
+			view: 'scroll',
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
