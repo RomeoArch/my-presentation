@@ -1,43 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+	<title>Codeforce — GenAI Meetup</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css" />
+	<link rel="stylesheet" href="dist/reveal.css" />
+	<link rel="stylesheet" href="dist/theme/dracula.css" />
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+
+	<style>
+		.reveal h1,
+		.reveal h2,
+		.reveal h3 {
+			text-transform: none;
+		}
+
+		.codeforce-logo {
+			font-weight: 700;
+			letter-spacing: 0.05em;
+		}
+
+		.codeforce-logo .accent {
+			color: #ff79c6;
+		}
+
+		.subtitle {
+			color: #8be9fd;
+			font-weight: 400;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 0.2em 0.6em;
+			margin: 0.2em;
+			border-radius: 0.4em;
+			background: rgba(139, 233, 253, 0.12);
+			border: 1px solid #8be9fd;
+			font-size: 0.6em;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Title -->
+			<section data-background-gradient="linear-gradient(135deg, #282a36 0%, #44475a 100%)">
+				<h1 class="codeforce-logo">Code<span class="accent">force</span></h1>
+				<h3 class="subtitle">The GenAI Meetup</h3>
+				<p>
+					<small>Edition #1 &middot; Talks, demos &amp; discussions about Generative AI</small>
+				</p>
+			</section>
+
+			<!-- What is Codeforce -->
+			<section>
+				<h2>What is Codeforce?</h2>
+				<ul>
+					<li class="fragment">A recurring meetup for people building with and curious about
+						<strong>Generative AI</strong></li>
+					<li class="fragment">Short talks, live demos, and open discussion — no slides-only lectures</li>
+					<li class="fragment">Open to all levels: from "what's a prompt?" to "I fine-tuned my own model"</li>
+				</ul>
+			</section>
+
+			<!-- Why we're here -->
+			<section>
+				<h2>Why we're here</h2>
+				<p class="fragment">GenAI is moving fast — new models, tools and techniques every week.</p>
+				<p class="fragment">Codeforce is a space to <strong>share what's working</strong>, learn from each
+					other, and build community around it.</p>
+			</section>
+
+			<!-- Agenda -->
+			<section>
+				<section>
+					<h2>Tonight's Agenda</h2>
+					<ol>
+						<li>Welcome &amp; intros</li>
+						<li>Talk 1 — Title here</li>
+						<li>Talk 2 — Title here</li>
+						<li>Live demo</li>
+						<li>Open discussion &amp; networking</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Talk 1</h3>
+					<p>Speaker name — short description of the talk goes here.</p>
+				</section>
+				<section>
+					<h3>Talk 2</h3>
+					<p>Speaker name — short description of the talk goes here.</p>
+				</section>
+			</section>
+
+			<!-- Topics -->
+			<section>
+				<h2>Topics We Cover</h2>
+				<p>
+					<span class="tag">LLMs</span>
+					<span class="tag">Agents</span>
+					<span class="tag">RAG</span>
+					<span class="tag">Prompt Engineering</span>
+					<span class="tag">Fine-tuning</span>
+					<span class="tag">AI Tooling</span>
+					<span class="tag">Ethics &amp; Safety</span>
+					<span class="tag">Open Source Models</span>
+				</p>
+			</section>
+
+			<!-- Get involved -->
+			<section>
+				<h2>Get Involved</h2>
+				<ul>
+					<li class="fragment">Want to give a talk? Reach out — we're always looking for speakers</li>
+					<li class="fragment">Follow us for the next event date &amp; location</li>
+					<li class="fragment">Bring a friend, bring an idea, bring questions</li>
+				</ul>
+			</section>
+
+			<!-- Thank you / contact -->
+			<section data-background-gradient="linear-gradient(135deg, #282a36 0%, #44475a 100%)">
+				<h1 class="codeforce-logo">Thanks for coming!</h1>
+				<p class="subtitle">Let's keep building together</p>
+				<p><small>contact@codeforce.example &middot; @codeforce</small></p>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="dist/plugin/notes.js"></script>
-		<script src="dist/plugin/markdown.js"></script>
-		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="dist/plugin/notes.js"></script>
+	<script src="dist/plugin/markdown.js"></script>
+	<script src="dist/plugin/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+		});
+	</script>
+</body>
+
 </html>
