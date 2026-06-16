@@ -1,0 +1,162 @@
+/* =======================================================
+   CONTACT SECTION (REDESIGNED)
+   ======================================================= */
+
+.contact {
+	margin-bottom: 80px;
+}
+
+.contact__header {
+	margin-bottom: 28px;
+}
+
+.contact__text {
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: clamp(1rem, 2.2vw, 1.2rem);
+	line-height: 1.6;
+	white-space: nowrap;
+}
+
+/* grid */
+.contact__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 18px;
+	margin-top: 28px;
+}
+
+/* base card */
+.contact__card {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	padding: 22px;
+
+	height: 140px;
+
+	border-radius: 20px;
+
+	text-decoration: none;
+	color: white;
+
+	border: 1px solid rgba(255, 255, 255, 0.08);
+
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(14px);
+
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+
+	overflow: hidden;
+
+	transition: all 0.35s ease;
+}
+
+/* subtle glow layer */
+.contact__card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%),
+			rgba(255, 255, 255, 0.08),
+			transparent 40%);
+
+	opacity: 0;
+	transition: opacity 0.35s ease;
+}
+
+/* hover lift */
+.contact__card:hover {
+	transform: translateY(-6px);
+	border-color: rgba(255, 255, 255, 0.18);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.contact__card:hover::before {
+	opacity: 1;
+}
+
+/* icon */
+.contact__icon {
+	width: 26px;
+	height: 26px;
+	opacity: 0.9;
+}
+
+/* title */
+.contact__title {
+	font-size: 1.05rem;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
+
+/* accent underline */
+.contact__card::after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	bottom: 18px;
+
+	width: 40px;
+	height: 2px;
+
+	border-radius: 2px;
+
+	background: rgba(255, 255, 255, 0.2);
+
+	transition: width 0.35s ease, opacity 0.35s ease;
+	opacity: 0.5;
+}
+
+.contact__card:hover::after {
+	width: 70px;
+	opacity: 1;
+}
+
+/* =======================================================
+   PLATFORM ACCENTS
+   ======================================================= */
+
+.contact__card--discord:hover {
+	border-color: rgba(88, 101, 242, 0.5);
+	box-shadow: 0 20px 60px rgba(88, 101, 242, 0.15);
+}
+
+.contact__card--linkedin:hover {
+	border-color: rgba(10, 102, 194, 0.5);
+	box-shadow: 0 20px 60px rgba(10, 102, 194, 0.15);
+}
+
+.contact__card--github:hover {
+	border-color: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 20px 60px rgba(255, 255, 255, 0.08);
+}
+
+.contact__card--partners:hover {
+	border-color: rgba(139, 92, 246, 0.5);
+	box-shadow: 0 20px 60px rgba(139, 92, 246, 0.15);
+}
+
+/* =======================================================
+   MOBILE
+   ======================================================= */
+
+@media (max-width: 900px) {
+	.contact__text {
+		font-size: 1rem;
+		white-space: normal;
+	}
+
+	.contact__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contact__card {
+		height: 130px;
+	}
+}

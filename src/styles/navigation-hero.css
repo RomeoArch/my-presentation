@@ -1,0 +1,134 @@
+/* =======================================================
+   NAVBAR
+   ======================================================= */
+
+.navbar {
+	height: 84px;
+
+	max-width: 1500px;
+
+	margin: 0 auto;
+
+	padding: 0 48px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar__logo {
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+}
+
+.navbar__logo span {
+	opacity: .7;
+}
+
+.navbar__nav {
+	display: flex;
+	gap: 36px;
+}
+
+.navbar__nav a {
+	color: rgba(255, 255, 255, .8);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.navbar__actions {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+
+.navbar__link {
+	color: white;
+	text-decoration: none;
+}
+
+.navbar__button {
+	text-decoration: none;
+
+	color: black;
+	background: white;
+
+	padding: 12px 20px;
+
+	border-radius: 14px;
+
+	font-weight: 600;
+}
+
+/* =======================================================
+   HERO
+   ======================================================= */
+
+.hero {
+	max-width: 1500px;
+
+	margin: 0 auto;
+
+	padding:
+		60px 48px 120px;
+}
+
+.hero__content {
+	max-width: 850px;
+}
+
+.hero__title {
+	margin: 0;
+
+	font-size: clamp(2.75rem, 5.5vw, 5rem);
+
+	line-height: 0.95;
+
+	letter-spacing: -0.06em;
+
+	font-weight: 700;
+}
+
+.hero__subtitle {
+	margin-top: 28px;
+
+	max-width: 700px;
+
+	color: var(--text-secondary);
+
+	font-size: 1.4rem;
+
+	line-height: 1.6;
+}
+
+.hero__actions {
+	display: flex;
+	gap: 18px;
+
+	margin-top: 40px;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 18px 28px;
+
+	border-radius: 999px;
+
+	text-decoration: none;
+
+	font-weight: 600;
+}
+
+.btn--primary {
+	background: white;
+	color: black;
+}
+
+.btn--secondary {
+	background: rgba(255, 255, 255, .08);
+	color: white;
+}

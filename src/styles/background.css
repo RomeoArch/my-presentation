@@ -1,0 +1,207 @@
+/* =======================================================
+   BACKGROUND
+   ======================================================= */
+
+.bg {
+	position: fixed;
+	inset: 0;
+
+	z-index: -1;
+
+	overflow: hidden;
+
+	background-color: var(--bg);
+}
+
+.bg__gradient {
+	position: absolute;
+	inset: -25%;
+
+	width: 150%;
+	height: 150%;
+
+	background:
+		linear-gradient(135deg,
+			var(--color-blue-deep) 0%,
+			var(--color-grey-deep) 45%,
+			var(--color-purple-deep) 100%);
+
+	opacity: 0.9;
+
+	animation: gradient-pan 24s ease-in-out infinite;
+}
+
+/* Big, blurred color blobs that bleed into each other */
+.bg__blob {
+	position: absolute;
+
+	border-radius: 50%;
+
+	filter: blur(120px);
+
+	opacity: 0.55;
+
+	will-change: transform;
+}
+
+.bg__blob--blue {
+	width: 55vw;
+	height: 55vw;
+	top: -10vw;
+	left: -8vw;
+
+	background: radial-gradient(circle, var(--color-blue), transparent 65%);
+
+	animation: drift-a 18s ease-in-out infinite;
+}
+
+.bg__blob--purple {
+	width: 50vw;
+	height: 50vw;
+	bottom: -12vw;
+	right: -6vw;
+
+	background: radial-gradient(circle, var(--color-purple), transparent 65%);
+
+	animation: drift-b 22s ease-in-out infinite;
+}
+
+.bg__blob--grey {
+	width: 45vw;
+	height: 45vw;
+	top: 30vh;
+	left: 35vw;
+
+	background: radial-gradient(circle, var(--color-grey), transparent 60%);
+
+	opacity: 0.4;
+
+	animation: drift-c 28s ease-in-out infinite;
+}
+
+.bg__grain {
+	position: absolute;
+
+	inset: -50%;
+
+	width: 200%;
+	height: 200%;
+
+	background-image:
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+	opacity: .16;
+
+	mix-blend-mode: overlay;
+
+	pointer-events: none;
+
+	animation: grain-shift 8s steps(6) infinite;
+}
+
+/* Background motion */
+@keyframes gradient-pan {
+
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+
+	50% {
+		transform: translate(-6%, -4%) rotate(8deg);
+	}
+}
+
+@keyframes drift-a {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	33% {
+		transform: translate(14vw, 8vh) scale(1.15);
+	}
+
+	66% {
+		transform: translate(8vw, 16vh) scale(0.95);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+@keyframes drift-b {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	33% {
+		transform: translate(-12vw, -8vh) scale(1.2);
+	}
+
+	66% {
+		transform: translate(-16vw, 4vh) scale(1.05);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+@keyframes drift-c {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	33% {
+		transform: translate(-14vw, 10vh) scale(0.85);
+	}
+
+	66% {
+		transform: translate(10vw, -8vh) scale(1.1);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+@keyframes grain-shift {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	20% {
+		transform: translate(-4%, 2%);
+	}
+
+	40% {
+		transform: translate(3%, -3%);
+	}
+
+	60% {
+		transform: translate(-2%, 4%);
+	}
+
+	80% {
+		transform: translate(4%, -2%);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.bg__gradient,
+	.bg__blob,
+	.bg__grain,
+	.card__cursor,
+	.anim--meetups span,
+	.anim--speakers span,
+	.anim--community .orbit,
+	.anim--projects .bar span {
+		animation: none;
+	}
+}

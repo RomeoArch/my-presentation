@@ -1,0 +1,429 @@
+/* =======================================================
+   CARD GRID
+   ======================================================= */
+
+.card-grid {
+	display: grid;
+
+	grid-template-columns: repeat(2, 1fr);
+
+	gap: 28px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 460px;
+
+	border-radius: 24px;
+
+	overflow: hidden;
+
+	border: 1px solid rgba(255, 255, 255, 0.08);
+
+	background:
+		linear-gradient(180deg,
+			rgba(255, 255, 255, 0.04),
+			rgba(255, 255, 255, 0) 35%),
+		linear-gradient(160deg,
+			rgba(58, 109, 240, 0.06),
+			rgba(139, 92, 246, 0.05) 60%,
+			transparent),
+		#0b0c11;
+
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Large visual area at the top of the card */
+.card__visual {
+	position: relative;
+
+	flex: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 300px;
+
+	overflow: hidden;
+}
+
+/* Orange pointer accent (matches reference) */
+.card__cursor {
+	position: absolute;
+
+	right: 32%;
+	bottom: 30%;
+
+	width: 34px;
+	height: 34px;
+
+	background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 2.5 L5 19 L9.2 14.8 L11.8 21 L14.6 19.8 L12 13.8 L18 13.5 Z' fill='%23f5a623' stroke='%23ffffff' stroke-width='0.6'/%3E%3C/svg%3E");
+
+	filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+
+	animation: cursor-float 4s ease-in-out infinite;
+}
+
+@keyframes cursor-float {
+
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(-8px, -10px);
+	}
+}
+
+/* Title + sentence at the bottom of the card */
+.card__body {
+	padding: 0 36px 36px;
+}
+
+.card__title {
+	margin: 0 0 12px;
+
+	font-size: 1.4rem;
+	font-weight: 600;
+
+	letter-spacing: -0.02em;
+}
+
+.card__text {
+	margin: 0;
+
+	max-width: 92%;
+
+	color: var(--text-secondary);
+
+	font-size: 1.02rem;
+
+	line-height: 1.55;
+}
+
+/* =======================================================
+   CARD ANIMATIONS (FIXED + MORE LIVING)
+   ======================================================= */
+
+.anim {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.75);
+	opacity: 0.9;
+}
+
+/* subtle floating for ALL icons */
+.anim {
+	animation: icon-float 6s ease-in-out infinite;
+}
+
+@keyframes icon-float {
+
+	0%,
+	100% {
+		transform: translateY(0) scale(0.75);
+	}
+
+	50% {
+		transform: translateY(-8px) scale(0.75);
+	}
+}
+
+/* =======================================================
+   1. STACK (Meetups)
+   ======================================================= */
+
+.anim--stack {
+	width: 90px;
+	height: 90px;
+	transform: rotateX(55deg) rotateZ(-45deg) scale(0.8);
+	transform-style: preserve-3d;
+}
+
+.stack-layer {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border: 1.5px solid rgba(255, 255, 255, 0.18);
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.02);
+	animation: stack-breathe 3s ease-in-out infinite;
+}
+
+.stack-layer:nth-child(1) {
+	transform: translateZ(0px);
+	opacity: 0.4;
+}
+
+.stack-layer:nth-child(2) {
+	transform: translateZ(18px);
+	opacity: 0.6;
+}
+
+.stack-layer:nth-child(3) {
+	transform: translateZ(36px);
+	border-color: rgba(245, 166, 35, 0.6);
+	background: rgba(245, 166, 35, 0.06);
+	animation: stack-top 2.8s ease-in-out infinite;
+}
+
+@keyframes stack-top {
+
+	0%,
+	100% {
+		transform: translateZ(36px);
+	}
+
+	50% {
+		transform: translateZ(46px);
+	}
+}
+
+@keyframes stack-breathe {
+
+	0%,
+	100% {
+		filter: brightness(1);
+	}
+
+	50% {
+		filter: brightness(1.3);
+	}
+}
+
+/* =======================================================
+   2. BARS (Speakers)
+   ======================================================= */
+
+.anim--bars {
+	width: 90px;
+	height: 60px;
+	display: flex;
+	align-items: flex-end;
+	gap: 4px;
+}
+
+.anim--bars span {
+	width: 6px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 6px;
+	animation: bars-wave 1.4s ease-in-out infinite;
+}
+
+.anim--bars span:nth-child(2) {
+	animation-delay: 0.1s;
+}
+
+.anim--bars span:nth-child(3) {
+	animation-delay: 0.2s;
+}
+
+.anim--bars span:nth-child(4) {
+	animation-delay: 0.3s;
+}
+
+.anim--bars span:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+@keyframes bars-wave {
+
+	0%,
+	100% {
+		transform: scaleY(0.6);
+		opacity: 0.4;
+	}
+
+	50% {
+		transform: scaleY(1.6);
+		opacity: 1;
+	}
+}
+
+/* =======================================================
+   3. ORBIT (Community)
+   ======================================================= */
+
+.anim--orbit {
+	width: 110px;
+	height: 110px;
+	position: relative;
+}
+
+.orbit-hub {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background: #f5a623;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 18px rgba(245, 166, 35, 0.6);
+}
+
+.orbit-ring {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 50%;
+	animation: orbit-rotate 6s linear infinite;
+}
+
+.orbit-ring i {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+}
+
+.orbit-ring i:nth-child(1) {
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.orbit-ring i:nth-child(2) {
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.orbit-ring i:nth-child(3) {
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@keyframes orbit-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* =======================================================
+   4. BUILD (Projects)
+   ======================================================= */
+
+.anim--build {
+	width: 110px;
+	height: 90px;
+	position: relative;
+}
+
+.build-track {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.15);
+	top: 50%;
+}
+
+.build-blocks i {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.05);
+	animation: build-move 3s ease-in-out infinite;
+}
+
+.build-blocks i:nth-child(1) {
+	left: 10px;
+	top: 20px;
+}
+
+.build-blocks i:nth-child(2) {
+	left: 45px;
+	top: 40px;
+	animation-delay: 0.3s;
+}
+
+.build-blocks i:nth-child(3) {
+	left: 80px;
+	top: 25px;
+	animation-delay: 0.6s;
+}
+
+.card:hover .anim {
+	transform: scale(0.85);
+	transition: 0.3s ease;
+}
+
+@keyframes build-move {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+/* =======================================================
+   MOBILE
+   ======================================================= */
+
+@media (max-width: 900px) {
+
+	.navbar__nav {
+		display: none;
+	}
+
+	.hero {
+		padding: 40px 24px 80px;
+	}
+
+	.navbar {
+		padding: 0 24px;
+	}
+
+	.hero__title {
+		font-size: 2.75rem;
+	}
+
+	.hero__subtitle {
+		font-size: 1.1rem;
+	}
+
+	.hero__actions {
+		flex-direction: column;
+	}
+
+	.slide-preview {
+		height: 300px;
+	}
+
+	.card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contact__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contact__text {
+		white-space: normal;
+	}
+
+	.divider {
+		margin: 56px 0;
+	}
+}
