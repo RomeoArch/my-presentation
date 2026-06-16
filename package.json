@@ -1,7 +1,7 @@
 {
 	"name": "codeforce-presentation",
 	"version": "1.0.0",
-	"description": "Codeforce - GenAI meetup presentation slides (built with reveal.js)",
+	"description": "Codeforce - GenAI meetup website",
 	"private": true,
 	"type": "module",
 	"scripts": {

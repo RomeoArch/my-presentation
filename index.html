@@ -2,166 +2,122 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Codeforce — The GenAI Meetup</title>
 
-	<title>Codeforce — GenAI Meetup</title>
-
-	<link rel="stylesheet" href="dist/reset.css" />
-	<link rel="stylesheet" href="dist/reveal.css" />
-	<link rel="stylesheet" href="dist/theme/dracula.css" />
-
-	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-
-	<style>
-		.reveal h1,
-		.reveal h2,
-		.reveal h3 {
-			text-transform: none;
-		}
-
-		.codeforce-logo {
-			font-weight: 700;
-			letter-spacing: 0.05em;
-		}
-
-		.codeforce-logo .accent {
-			color: #ff79c6;
-		}
-
-		.codeforce-logo--small {
-			font-size: 1.4em;
-			position: absolute;
-			top: 0.4em;
-			left: 0.4em;
-			margin: 0;
-		}
-
-		.subtitle {
-			color: #8be9fd;
-			font-weight: 400;
-		}
-
-		.tag {
-			display: inline-block;
-			padding: 0.2em 0.6em;
-			margin: 0.2em;
-			border-radius: 0.4em;
-			background: rgba(139, 233, 253, 0.12);
-			border: 1px solid #8be9fd;
-			font-size: 0.6em;
-		}
-	</style>
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<!-- Title -->
-			<section data-background-gradient="linear-gradient(135deg, #282a36 0%, #44475a 100%)" data-auto-animate>
-				<h1 class="codeforce-logo" data-id="codeforce-title">Code<span class="accent">force</span></h1>
-				<h3 class="subtitle">The GenAI Meetup</h3>
-				<p>
-					<small>Edition #1 &middot; Talks, demos &amp; discussions about Generative AI</small>
-				</p>
-			</section>
 
-			<!-- What is Codeforce -->
-			<section data-auto-animate>
-				<h1 class="codeforce-logo codeforce-logo--small" data-id="codeforce-title">Code<span class="accent">force</span></h1>
-				<h2>What is Codeforce?</h2>
-				<ul>
-					<li class="fragment">A recurring meetup for people building with and curious about
-						<strong>Generative AI</strong></li>
-					<li class="fragment">Short talks, live demos, and open discussion — no slides-only lectures</li>
-					<li class="fragment">Open to all levels: from "what's a prompt?" to "I fine-tuned my own model"</li>
-				</ul>
-			</section>
-
-			<!-- Why we're here -->
-			<section>
-				<h2>Why we're here</h2>
-				<p class="fragment">GenAI is moving fast — new models, tools and techniques every week.</p>
-				<p class="fragment">Codeforce is a space to <strong>share what's working</strong>, learn from each
-					other, and build community around it.</p>
-			</section>
-
-			<!-- Agenda -->
-			<section>
-				<section>
-					<h2>Tonight's Agenda</h2>
-					<ol>
-						<li>Welcome &amp; intros</li>
-						<li>Talk 1 — Title here</li>
-						<li>Talk 2 — Title here</li>
-						<li>Live demo</li>
-						<li>Open discussion &amp; networking</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Talk 1</h3>
-					<p>Speaker name — short description of the talk goes here.</p>
-				</section>
-				<section>
-					<h3>Talk 2</h3>
-					<p>Speaker name — short description of the talk goes here.</p>
-				</section>
-			</section>
-
-			<!-- Topics -->
-			<section>
-				<h2>Topics We Cover</h2>
-				<p>
-					<span class="tag">LLMs</span>
-					<span class="tag">Agents</span>
-					<span class="tag">RAG</span>
-					<span class="tag">Prompt Engineering</span>
-					<span class="tag">Fine-tuning</span>
-					<span class="tag">AI Tooling</span>
-					<span class="tag">Ethics &amp; Safety</span>
-					<span class="tag">Open Source Models</span>
-				</p>
-			</section>
-
-			<!-- Get involved -->
-			<section>
-				<h2>Get Involved</h2>
-				<ul>
-					<li class="fragment">Want to give a talk? Reach out — we're always looking for speakers</li>
-					<li class="fragment">Follow us for the next event date &amp; location</li>
-					<li class="fragment">Bring a friend, bring an idea, bring questions</li>
-				</ul>
-			</section>
-
-			<!-- Thank you / contact -->
-			<section data-background-gradient="linear-gradient(135deg, #282a36 0%, #44475a 100%)">
-				<h1 class="codeforce-logo">Thanks for coming!</h1>
-				<p class="subtitle">Let's keep building together</p>
-				<p><small>contact@codeforce.example &middot; @codeforce</small></p>
-			</section>
-		</div>
+	<!-- Background -->
+	<div class="bg" aria-hidden="true">
+		<div class="bg__gradient"></div>
+		<div class="bg__blob bg__blob--blue"></div>
+		<div class="bg__blob bg__blob--purple"></div>
+		<div class="bg__blob bg__blob--grey"></div>
+		<div class="bg__grain"></div>
 	</div>
 
-	<script src="dist/reveal.js"></script>
-	<script src="dist/plugin/notes.js"></script>
-	<script src="dist/plugin/markdown.js"></script>
-	<script src="dist/plugin/highlight.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		Reveal.initialize({
-			hash: true,
+	<!-- Navigation -->
+	<header class="navbar">
 
-			// Scroll-driven navigation: move through slides by scrolling down,
-			// no horizontal "next slide" paging.
-			view: 'scroll',
+		<div class="navbar__logo">
+			Ai Austria
+		</div>
 
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-		});
-	</script>
+		<nav class="navbar__nav">
+			<a href="#">Meetups</a>
+			<a href="#">Speakers</a>
+			<a href="#">Community</a>
+			<a href="#">Projects</a>
+		</nav>
+
+	</header>
+
+	<!-- Hero -->
+	<main class="hero">
+
+		<div class="hero__content">
+
+			<h1 class="hero__title">
+				Codeforce.<br>
+				GenAi Community.
+			</h1>
+
+			<p class="hero__subtitle">
+				Learn, build and connect with Austria's growing AI community.
+				Meet developers, researchers, founders and enthusiasts exploring
+				the future of artificial intelligence.
+			</p>
+
+			<div class="hero__actions">
+				<a href="#" class="btn btn--primary">
+					Join Meetup →
+				</a>
+
+				<a href="#" class="btn btn--secondary">
+					View Slides
+				</a>
+			</div>
+
+		</div>
+
+		<section class="editor-preview">
+
+			<div class="editor-preview__toolbar"></div>
+
+			<div class="editor-preview__content">
+
+				<div class="slide-preview"></div>
+
+			</div>
+
+		</section>
+
+		<hr class="divider">
+
+		<h2 class="section-title">Everything in one place.</h2>
+
+		<section class="card-grid">
+
+			<article class="card">
+				<h3 class="card__title">Meetups</h3>
+				<div class="card__anim anim--meetups">
+					<span></span><span></span><span></span>
+				</div>
+				<p class="card__text">Regular gatherings to share talks, demos and ideas.</p>
+			</article>
+
+			<article class="card">
+				<h3 class="card__title">Speakers</h3>
+				<div class="card__anim anim--speakers">
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
+				<p class="card__text">Developers, researchers and founders shaping GenAI.</p>
+			</article>
+
+			<article class="card">
+				<h3 class="card__title">Community</h3>
+				<div class="card__anim anim--community">
+					<div class="orbit"><span></span><span></span><span></span></div>
+				</div>
+				<p class="card__text">Connect with Austria's growing AI community.</p>
+			</article>
+
+			<article class="card">
+				<h3 class="card__title">Projects</h3>
+				<div class="card__anim anim--projects">
+					<div class="bar"><span></span></div>
+				</div>
+				<p class="card__text">Build, collaborate and ship together.</p>
+			</article>
+
+		</section>
+
+	</main>
+
 </body>
 
 </html>
