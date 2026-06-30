@@ -31,6 +31,49 @@
 	gap: 36px;
 }
 
+/* Hamburger toggle — hidden on desktop, shown on mobile */
+.navbar__burger {
+	display: none;
+
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+
+	width: 44px;
+	height: 44px;
+
+	padding: 10px;
+	margin: 0;
+
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.navbar__burger span {
+	display: block;
+
+	height: 2px;
+	width: 100%;
+
+	background: #fff;
+	border-radius: 2px;
+
+	transition: transform .25s ease, opacity .25s ease;
+}
+
+.navbar.is-open .navbar__burger span:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+
+.navbar.is-open .navbar__burger span:nth-child(2) {
+	opacity: 0;
+}
+
+.navbar.is-open .navbar__burger span:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
 .navbar__nav a {
 	color: rgba(255, 255, 255, .8);
 	text-decoration: none;
