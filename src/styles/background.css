@@ -6,11 +6,22 @@
 	position: fixed;
 	inset: 0;
 
+	/* Cover the dynamic mobile viewport so the address bar showing/hiding
+	   never leaves an unpainted (black) strip while scrolling. */
+	width: 100vw;
+	height: 100vh;
+	height: 100dvh;
+
 	z-index: -1;
 
 	overflow: hidden;
 
 	background-color: var(--bg);
+
+	/* Promote to its own layer so any sub-layer paint glitch still
+	   composites over the solid dark background instead of black. */
+	transform: translateZ(0);
+	backface-visibility: hidden;
 }
 
 .bg__gradient {
@@ -189,6 +200,24 @@
 
 	100% {
 		transform: translate(0, 0);
+	}
+}
+
+/* On phones the blurred, animated blobs are too heavy for the GPU and can
+   flash black corners while scrolling. Keep them static and lighter there. */
+@media (max-width: 768px) {
+
+	.bg__blob {
+		filter: blur(70px);
+		animation: none;
+	}
+
+	.bg__gradient {
+		animation: none;
+	}
+
+	.bg__grain {
+		animation: none;
 	}
 }
 
