@@ -15,7 +15,15 @@
 }
 
 .editor-preview__toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	gap: 16px;
+
 	height: 50px;
+
+	padding: 0 16px;
 
 	border-bottom: 1px solid var(--border);
 
@@ -29,67 +37,193 @@
 	padding: 50px;
 }
 
-.slide-preview {
+/* =======================================================
+   DECK EMBED
+   ======================================================= */
+
+/* Month switcher, one button per folder in public/decks/. */
+.deck-tabs {
+	display: flex;
+	align-items: center;
+
+	gap: 4px;
+
+	min-width: 0;
+
+	overflow-x: auto;
+
+	scrollbar-width: none;
+}
+
+.deck-tabs::-webkit-scrollbar {
+	display: none;
+}
+
+.deck-tab {
+	flex: 0 0 auto;
+
+	padding: 6px 14px;
+
+	border: 1px solid transparent;
+	border-radius: 999px;
+
+	background: none;
+
+	color: var(--text-secondary);
+
+	font: inherit;
+	font-size: .9rem;
+
+	white-space: nowrap;
+
+	cursor: pointer;
+
+	transition:
+		color .2s ease,
+		background .2s ease,
+		border-color .2s ease;
+}
+
+.deck-tab:hover {
+	color: var(--text);
+
+	background: rgba(255, 255, 255, 0.06);
+}
+
+.deck-tab.is-active {
+	color: var(--text);
+
+	background: rgba(58, 109, 240, 0.16);
+	border-color: rgba(58, 109, 240, 0.45);
+}
+
+.deck-open {
+	flex: 0 0 auto;
+
+	color: var(--text-secondary);
+
+	font-size: .85rem;
+
+	text-decoration: none;
+
+	white-space: nowrap;
+
+	transition: color .2s ease;
+}
+
+.deck-open:hover {
+	color: var(--text);
+}
+
+/* The archived decks are full-screen presentations sized in vh/vw with their
+   own breakpoints, so the iframe is rendered at a fixed 1600x900 desktop
+   viewport and scaled down to fit. main.js keeps --deck-scale in sync with the
+   stage width — without it the deck would drop into its own mobile layout. */
+.deck-stage {
 	position: relative;
 
-	height: 520px;
+	aspect-ratio: 16 / 9;
 
-	background: transparent;
-
+	border: 1px solid var(--border);
 	border-radius: 12px;
+
+	background: var(--panel);
 
 	overflow: hidden;
 }
 
-.slide-preview__title {
+.deck-stage__frame {
 	position: absolute;
 
-	top: 60px;
-	left: 60px;
+	top: 0;
+	left: 0;
 
-	width: 700px;
+	width: 1600px;
+	height: 900px;
 
-	font-size: 5rem;
+	border: 0;
 
-	font-weight: 800;
-
-	line-height: .9;
+	transform: scale(var(--deck-scale, 1));
+	transform-origin: top left;
 }
 
-.slide-preview__line {
+.deck-stage__placeholder {
 	position: absolute;
 
-	top: 180px;
-	left: 40px;
+	inset: 0;
 
-	width: 80%;
-	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-	border-radius: 20px;
+	margin: 0;
 
-	background: #1447ff;
+	color: var(--text-secondary);
+
+	font-size: .95rem;
 }
 
-.slide-preview__circle {
+/* Once the deck is in the frame the placeholder is no longer needed. */
+.deck-stage.is-loaded .deck-stage__placeholder {
+	display: none;
+}
+
+/* Overlay arrows — they click the deck's own #nav-prev / #nav-next inside the
+   iframe, so the slides can be stepped through without focusing the frame. */
+.deck-nav {
 	position: absolute;
 
-	right: 60px;
-	bottom: 40px;
+	top: 50%;
 
-	width: 320px;
-	height: 320px;
+	display: none;
 
+	width: 44px;
+	height: 44px;
+
+	padding: 0;
+
+	transform: translateY(-50%);
+
+	border: 1px solid rgba(255, 255, 255, 0.22);
 	border-radius: 50%;
 
-	background:
-		radial-gradient(circle at 30% 30%,
-			white,
-			#ffd54a,
-			#ff5b00,
-			#0037ff,
-			black);
+	background: rgba(14, 15, 20, 0.55);
 
-	filter: blur(2px);
+	color: #fff;
+
+	font-size: 1.6rem;
+	line-height: 1;
+
+	cursor: pointer;
+
+	backdrop-filter: blur(6px);
+
+	transition:
+		background .2s ease,
+		border-color .2s ease,
+		opacity .2s ease;
+}
+
+.deck-stage.is-loaded .deck-nav {
+	display: block;
+}
+
+.deck-nav:hover {
+	background: rgba(14, 15, 20, 0.8);
+	border-color: rgba(255, 255, 255, 0.45);
+}
+
+.deck-nav:focus-visible {
+	outline: 2px solid var(--color-blue);
+	outline-offset: 2px;
+}
+
+.deck-nav--prev {
+	left: 14px;
+}
+
+.deck-nav--next {
+	right: 14px;
 }
 
 /* =======================================================
@@ -123,4 +257,30 @@
 
 .section-title--tight {
 	margin-top: 0;
+}
+
+/* Title followed by a lead paragraph — the paragraph owns the bottom gap. */
+.section-title--lead {
+	margin-bottom: 16px;
+}
+
+.section-lead {
+	max-width: 720px;
+
+	margin: 0 0 44px;
+
+	color: var(--text-secondary);
+
+	font-size: 1.12rem;
+
+	line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+
+	.section-lead {
+		margin-bottom: 34px;
+
+		font-size: 1.02rem;
+	}
 }

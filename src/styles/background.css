@@ -223,14 +223,10 @@
 
 @media (prefers-reduced-motion: reduce) {
 
+	/* The card animations switch themselves off in cards.css. */
 	.bg__gradient,
 	.bg__blob,
-	.bg__grain,
-	.card__cursor,
-	.anim--meetups span,
-	.anim--speakers span,
-	.anim--community .orbit,
-	.anim--projects .bar span {
+	.bg__grain {
 		animation: none;
 	}
 }
