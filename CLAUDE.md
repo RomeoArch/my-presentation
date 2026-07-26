@@ -15,7 +15,13 @@ npm run publish-deck -- 2026-06
 npm run publish-deck -- -All
 ```
 
-There are no tests, no linter, and no build config file — Vite runs on defaults with `index.html` as the entry point.
+There are no tests and no linter. `vite.config.js` sets exactly one thing — `base: "/my-presentation/"`, the GitHub Pages subpath — so the dev server and the preview server both serve the site at `/my-presentation/`, not `/`. `index.html` is the entry point.
+
+## Deployment
+
+The site is published to GitHub Pages at `https://romeoarch.github.io/my-presentation/` by `.github/workflows/deploy.yml`, which builds on every push to `master` and uploads `dist/`. The repo's Pages source must stay on **GitHub Actions** — pointing Pages at the branch root instead serves the unbuilt `index.html`, where the stylesheets resolve to `src/styles/*` and the decks sit under `public/decks/`, so the deck iframe 404s.
+
+Because the site lives on a subpath, **no URL in the source may start with `/`**. Asset references in `index.html` are relative; `main.js` builds the deck URLs from `import.meta.env.BASE_URL` (which Vite replaces with the `base` value and which always ends in a slash).
 
 ## Architecture
 

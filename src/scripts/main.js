@@ -83,8 +83,11 @@
 		const DECK_WIDTH = 1600;
 		let mounted = false;
 
+		// BASE_URL is "/" locally and "/my-presentation/" on GitHub Pages (see
+		// vite.config.js). It always ends in a slash. A hardcoded "/decks/..."
+		// would escape the project subpath on Pages and 404.
 		function deckUrl(id) {
-			return "/decks/" + id + "/index.html";
+			return import.meta.env.BASE_URL + "decks/" + id + "/index.html";
 		}
 
 		function fitDeck() {
@@ -182,6 +185,10 @@
 		})[0] || deckTabs[0];
 
 		if (initial) {
+			// showDeck() only runs once the section scrolls into view, so point
+			// the fullscreen link at the right deck straight away.
+			if (deckOpen) deckOpen.href = deckUrl(initial.getAttribute("data-deck"));
+
 			if (window.IntersectionObserver) {
 				const observer = new IntersectionObserver(function (entries) {
 					entries.forEach(function (entry) {

@@ -11,7 +11,9 @@ node_modules/
 .sass-cache
 presentation
 presentation.zip
-dist/reveal.es5.js
 react/dist
 react/demo/dist
 dev.html
+
+# Build output — GitHub Actions builds and publishes this, it is not committed.
+dist/
