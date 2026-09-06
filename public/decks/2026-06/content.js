@@ -9,7 +9,7 @@
      next      -> date/time of the NEXT codeforce (drives the live countdown)
      links     -> discord / meetup
      presenters-> people + their LinkedIn URLs (QR codes are auto-generated)
-     memes     -> drop images in assets/memes/ and list them here
+     memes     -> the month's jokes, described in our own words (no images)
      events    -> AI Austria meetup + other community events
      agenda    -> the running order
      slido     -> embed URL + join code + the questions
@@ -32,12 +32,14 @@ window.CODEFORCE = {
   },
 
   /* ---- Cover meme (the "keep up with AI news" eyes meme) ------------------
-     Set `image` to a file in assets/memes/ to use a real picture on the cover.
-     If `image` is omitted it falls back to the code-recreated version below
-     (rows / skull / footer), which always matches the active theme. */
+     Rendered from code (rows / skull / footer) so it always matches the active
+     theme — and so the archive ships nothing we don't own. Do NOT set `image`
+     to a picture found online: this deck is published publicly on GitHub Pages,
+     which makes it an act of publication, not a talk. See CREDITS.md. */
   coverMeme: {
-    image: "assets/memes/keep_up_with_AI_news.png",
-    // --- fallback (used only if `image` is removed) ---
+    // Link to the original post. Renders a "See the meme" button under the
+    // cover meme; remove the url and the button disappears.
+    url: "https://www.facebook.com/groups/698593531630485/posts/1270400647783101/",
     rows: [
       { label: "STRESS",  eyes: "👀" },
       { label: "ALCOHOL", eyes: "👀" },
@@ -78,23 +80,40 @@ window.CODEFORCE = {
   ],
 
   /* ---- Memes -------------------------------------------------------------
-     Drop files into assets/memes/ and list them here. `caption` is optional.
+     This deck is archived to a PUBLIC website, so we describe the month's memes
+     instead of reproducing them — we don't hold rights to the images, and
+     publishing is what creates exposure (showing them live in the room is not).
+     `format` = the meme template, `caption` = the punchline, `explain` = why
+     it's funny, `url` = where to see the original. Do NOT add a `src:` pointing
+     at a picture found online — but DO add a `url:`. Linking is not
+     reproduction, so a link needs no licence; it's the safe way to show people
+     the actual image. A card with no `url` simply shows no link — better than a
+     "See the meme" button that lands somewhere that isn't the meme.
      For websites/links, use `funSites` below (a live embed slide) — a URL makes
-     a poor meme tile. (A { type:"link", url, label } meme card still works if
-     you ever want one, but the grid looks best with images only.) */
-  // `caption` shows on the tile; `explain` (optional) is the small blurb shown
-  // under the image when a meme is clicked open — the "why it's funny" line.
+     a poor meme tile. ({ type:"link", url, label } renders a QR card.) */
   memes: [
-    { src: "assets/memes/meme1.jpeg", caption: "Microslop: “I’m gonna implement AI even harder”",
-      explain: "The Office “stop — I’m gonna do it even harder” format, aimed at Microsoft (“Microslop”). Everyone’s begging companies to stop bolting AI onto everything; Microsoft answers by cramming Copilot in even harder." },
-    { src: "assets/memes/meme2.jpeg", caption: "Mistral releases “Le Chaton Fat” — 24T params, très lourd",
+    { format: "The Office · “even harder”",
+      url: "https://www.reddit.com/r/pcmasterrace/comments/1rj18el/gg_microslop/",
+      caption: "Microslop: “I’m gonna implement AI even harder”",
+      explain: "The “stop — I’m gonna do it even harder” format, aimed at Microsoft (“Microslop”). Everyone’s begging companies to stop bolting AI onto everything; Microsoft answers by cramming Copilot in even harder." },
+    { format: "Fat cat · parameter race",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7472318762596306945?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7472318762596306945%2C7472318892535783424%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287472318892535783424%2Curn%3Ali%3Aactivity%3A7472318762596306945%29",
+      caption: "Mistral releases “Le Chaton Fat” — 24T params, très lourd",
       explain: "A pun on Mistral’s real assistant “Le Chat” → “Le Chaton” (kitten) + “Fat”: a 24-trillion-parameter model drawn as an obese cat, mocking the “bigger is better” parameter race (“some models scale, some develop gravity”). Maximum French branding optional." },
-    { src: "assets/memes/meme3.jpeg", caption: "Amodei paints the AI monster he warns us about",
-      explain: "That’s Anthropic CEO Dario Amodei painting the AI monster himself — his drumbeat that AI is too dangerous and governments should be able to block it (he called for exactly that in June 2026). Then he panics at the monster he conjured: a jab that the doom-hype is self-serving." },
-    { src: "assets/memes/meme4.jpeg", caption: "Musk runs a 6-hour task on Fable 5, sees the Anthropic bill",
-      explain: "Spoof headline: Elon Musk “loses trillionaire status” after accidentally running a 6-hour task on Fable 5 — “saw the Anthropic bill and fainted.” Frontier-model compute is the punchline, landing right on this month’s motto: AI now costs more than the humans it replaces." },
+    { format: "Painter & monster",
+      url: "",   // ← TODO: no link supplied for this one, so its card shows no button
+      caption: "Amodei paints the AI monster he warns us about",
+      explain: "Anthropic CEO Dario Amodei, painting the AI monster himself — his drumbeat that AI is too dangerous and governments should be able to block it (he called for exactly that in June 2026). Then he panics at the monster he conjured: a jab that the doom-hype is self-serving." },
+    { format: "Spoof headline · satire",
+      url: "https://www.reddit.com/r/ClaudeAI/comments/1u47yk5/musk_loses_trillionaire_status_thanks_to_fable/",
+      caption: "Musk runs a 6-hour task on Fable 5, sees the Anthropic bill",
+      explain: "An invented headline (satire, not a real report): Elon Musk “loses trillionaire status” after accidentally running a 6-hour task on Fable 5 — “saw the Anthropic bill and fainted.” Frontier-model compute is the punchline, landing right on this month’s motto: AI now costs more than the humans it replaces." },
   ],
-  // Small credit shown under the memes title. Set to null to hide.
+  // NOTE: nothing renders this — it's leftover config from an earlier version of
+  // the deck, kept only so the field isn't silently lost. Don't wire it up as a
+  // link target for the meme cards: youraislopbores.me is a prompt/answer game,
+  // not a meme archive, so it never hosted these images. Per-meme links go in
+  // the `url` field above.
   memeSource: { label: "youraislopbores.me", url: "https://youraislopbores.me/" },
 
   /* ---- Fun AI site(s) of the month --------------------------------------
@@ -303,6 +322,9 @@ window.CODEFORCE = {
       // (Pulled from the paper's repo — see links.repo — into assets/news/.)
       figure: "assets/news/harness-architecture.png",
       figureCaption: "The 6-part harness, visualized — click to zoom",
+      // CC BY 4.0 requires attribution wherever the figure is shown. This line
+      // is that attribution — keep it on the slide. Details in CREDITS.md.
+      figureCredit: "Figure from Meng, Wang, Chen et al., “Agent Harness for LLM Agents: A Survey” (preprints.org) · CC BY 4.0",
       // The jaw-dropper stat (animated bar):
       stat: { from: 6.7, to: 68.3, model: "Grok Code Fast", bench: "SWE-bench",
               caption: "Same model. They changed only the harness's code-edit format.",

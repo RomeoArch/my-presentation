@@ -57,5 +57,31 @@ foreach ($slug in $editions) {
   if (Test-Path $target) { Remove-Item $target -Recurse -Force }
 
   Copy-Item $src -Destination $target -Recurse
+
+  # Archived decks are copied verbatim out of the deck repo, so a deck authored
+  # for the room won't carry the noindex tag the published archive needs. Inject
+  # it here rather than relying on every future edition remembering: publishing
+  # a deck to a public URL is what creates copyright exposure, and keeping the
+  # archive out of reverse-image crawlers removes the discovery path.
+  # (robots.txt can't do this job - it's only read from the domain root, and the
+  # site is served from the /my-presentation/ subpath.)
+  $indexPath = Join-Path $target 'index.html'
+  $html = Get-Content $indexPath -Raw
+  if ($html -notmatch '(?i)name\s*=\s*"robots"') {
+    $tag = '  <meta name="robots" content="noindex, nofollow, noimageindex, noarchive">'
+    $html = [regex]::Replace(
+      $html,
+      '(?i)(<meta\s+name\s*=\s*"viewport"[^>]*>)',
+      "`$1`r`n$tag",
+      [System.Text.RegularExpressions.RegexOptions]::None,
+      [timespan]::FromSeconds(5))
+    Set-Content $indexPath $html -NoNewline -Encoding utf8
+    Write-Host "  + injected noindex meta tag" -ForegroundColor DarkGray
+  }
+
+  if (-not (Test-Path (Join-Path $target 'CREDITS.md'))) {
+    Write-Warning "  '$slug' has no CREDITS.md - check what's in assets/ before this goes public."
+  }
+
   Write-Host "Published '$slug' -> public/decks/$slug/" -ForegroundColor Green
 }

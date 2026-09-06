@@ -77,20 +77,29 @@
 
   function eyememe() {
     const m = C.coverMeme; if (!m) return "";
+    let fig;
     if (m.image) {
-      return `<figure class="eyememe eyememe--img">
+      fig = `<figure class="eyememe eyememe--img">
         <img src="${esc(m.image)}" alt="${esc(m.alt || m.footer || "Keep up with AI news meme")}">
         ${m.credit ? `<span class="eyememe__credit">${esc(m.credit)}</span>` : ""}
       </figure>`;
+    } else {
+      const rows = m.rows.map((r, i) =>
+        `<div class="band lvl${i + 1}"><span class="eyes">${esc(r.eyes || "👀")}</span><span class="lbl">${esc(r.label)}</span></div>`).join("");
+      const skull = m.skull ? `<div class="band skull"><span class="eyes">💀</span></div>` : "";
+      fig = `<figure class="eyememe">
+        ${m.credit ? `<span class="eyememe__credit">${esc(m.credit)}</span>` : ""}
+        <div class="eyememe__rows">${rows}${skull}</div>
+        <div class="eyememe__footer">${esc(m.footer || "KEEP UP WITH AI NEWS")}</div>
+      </figure>`;
     }
-    const rows = m.rows.map((r, i) =>
-      `<div class="band lvl${i + 1}"><span class="eyes">${esc(r.eyes || "👀")}</span><span class="lbl">${esc(r.label)}</span></div>`).join("");
-    const skull = m.skull ? `<div class="band skull"><span class="eyes">💀</span></div>` : "";
-    return `<figure class="eyememe">
-      ${m.credit ? `<span class="eyememe__credit">${esc(m.credit)}</span>` : ""}
-      <div class="eyememe__rows">${rows}${skull}</div>
-      <div class="eyememe__footer">${esc(m.footer || "KEEP UP WITH AI NEWS")}</div>
-    </figure>`;
+    // The link sits OUTSIDE .eyememe on purpose: that figure is rotated, and
+    // rotated text renders soft. Kept out of the transform, it stays crisp.
+    // Renders only with a real `url` — same rule as the meme cards.
+    if (!m.url) return fig;
+    return `<div class="eyememe-wrap">${fig}` +
+      `<a class="eyememe__see" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow">` +
+      `See the meme <span aria-hidden="true">↗</span></a></div>`;
   }
 
   function buildCover() {
@@ -117,6 +126,21 @@
         return `<figure class="meme meme--link panel">
             <div><div class="muted" style="font-size:.8rem;letter-spacing:.2em;text-transform:uppercase">${esc(m.caption || "Meme drop")}</div>
             <div class="lbl mt">${esc(m.label || m.url)}</div>${qrCard(m.url, 110, 4)}${linkmono(m.url)}</div></figure>`;
+      // No `src` → a "described" card: our own words about the joke, plus a link
+      // out to the original. Linking is not reproduction, so it needs no licence
+      // — that's the whole point of pointing at the image instead of shipping a
+      // copy of it. See CREDITS.md.
+      // The link renders ONLY with a real per-meme `url`: a "See the meme" that
+      // lands on a site's homepage promises the specific image and doesn't
+      // deliver, which is worse than no link at all. No url → no button.
+      if (!m.src) {
+        const seeUrl = m.url || "";
+        return `<figure class="meme meme--told panel">
+            <div class="meme__format">${esc(m.format || "Meme")}</div>
+            <blockquote class="meme__punchline">${esc(m.caption || "")}</blockquote>
+            ${m.explain ? `<figcaption class="meme__explain">${esc(m.explain)}</figcaption>` : ""}
+            ${seeUrl ? `<a class="meme__see" href="${esc(seeUrl)}" target="_blank" rel="noopener noreferrer nofollow">See the meme <span aria-hidden="true">↗</span></a>` : ""}</figure>`;
+      }
       return `<figure class="meme" data-full="${esc(m.src)}" data-caption="${esc(m.caption || "")}" data-explain="${esc(m.explain || "")}">
           <img src="${esc(m.src)}" alt="meme" loading="lazy">
           ${m.caption ? `<figcaption>${esc(m.caption)}</figcaption>` : ""}</figure>`;
@@ -702,7 +726,8 @@
         <div class="panel hx">
           ${h.figure ? `<figure class="hx-fig zoom" data-full="${esc(h.figure)}" data-caption="${esc(h.paperTitle)}" data-explain="${esc(h.thesis)}">
             <img src="${esc(h.figure)}" alt="Agent harness architecture — H = (E, T, C, S, L, V)" loading="lazy">
-            <figcaption>🔍 ${esc(h.figureCaption || "click to zoom")}</figcaption></figure>` : ""}
+            <figcaption>🔍 ${esc(h.figureCaption || "click to zoom")}</figcaption>
+            ${h.figureCredit ? `<small class="hx-fig__credit">${esc(h.figureCredit)}</small>` : ""}</figure>` : ""}
           <div class="hx-formula"><span class="hx-h">H =</span> <span class="hx-br">⟨</span> ${formula} <span class="hx-br">⟩</span></div>
           <p class="muted hx-sub">The 6 parts of a harness — click a letter:</p>
           <div class="hx-details">${details}</div>

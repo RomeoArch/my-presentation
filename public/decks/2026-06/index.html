@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Keep the archived deck out of search and image indexes. Third-party
+       image-rights enforcement runs on reverse-image crawlers, so staying
+       unindexed removes the discovery path. See CREDITS.md. Note this meta tag
+       is the mechanism that actually works here: robots.txt is only read from
+       the domain root, and this site lives on the /my-presentation/ subpath. -->
+  <meta name="robots" content="noindex, nofollow, noimageindex, noarchive">
   <title>GenAI-Codeforce</title>
   <link rel="icon" href="assets/brand/logo.png">
   <link rel="stylesheet" href="styles.css">

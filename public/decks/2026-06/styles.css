@@ -298,6 +298,58 @@ p{color:var(--muted);font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.55;max-wi
 .meme--link{display:grid;place-items:center;text-align:center;padding:1rem;cursor:default}
 .meme--link .lbl{font-family:var(--font-mono);color:var(--secondary);font-size:1.1rem;word-break:break-all}
 
+/* "told, not shown" tile — the joke in our own words, so the public archive
+   ships no picture we don't hold the rights to. Same taped-polaroid frame. */
+/* A grid of text tiles wants different proportions than a grid of pictures: the
+   3+2 alternating spans give the narrow tiles too little width for a paragraph,
+   so they clip. When the slide is text cards, go to two equal columns and take
+   a bit more height. (`:has()` keeps this scoped without touching buildMemes.) */
+.memes:has(.meme--told){grid-template-columns:repeat(2,1fr);
+  height:min(68vh,calc(100dvh - 18rem))}
+.memes:has(.meme--told) .meme{grid-column:span 1}
+.meme--told{display:flex;flex-direction:column;gap:.5rem;justify-content:flex-start;
+  padding:1.15rem 1.2rem;text-align:left;cursor:default;overflow:hidden}
+/* Sit these tiles square on the pixel grid. The nth-child `rotate()` above is
+   the scattered-polaroid look for PICTURE tiles, but rotating a text tile
+   resamples the glyphs and kills subpixel antialiasing, so the blurb renders
+   soft until you hover (where the rule resets to rotate(0) and it snaps sharp).
+   Text tiles keep the tape and the hover lift, minus the rotation.
+   Needs to BEAT `.meme:nth-child(6n+1)` (0,2,0), not just tie it: this block
+   sits earlier in the file, and on a tie the later rule wins. Hence the extra
+   `.memes` — 0,3,0. */
+.memes .meme.meme--told{transform:none}
+.memes .meme.meme--told:hover{transform:translateY(-8px) scale(1.04)}
+/* The tiles are fixed-height grid cells, so the blurb is the only part allowed
+   to give. It must be the flex item that grows AND shrinks — `min-height:0` is
+   what lets it drop below its content height; without it the paragraph overflows
+   and covers the link below. Everything else keeps its natural size. */
+.meme__format{flex:none;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--secondary);opacity:.9}
+.meme__punchline{flex:none;font-family:var(--font-display);font-weight:700;line-height:1.2;
+  font-size:clamp(.95rem,1.35vw,1.35rem);color:var(--text);margin:0;
+  border-left:3px solid var(--accent);padding-left:.7rem}
+/* Reset `.meme figcaption` above: that rule pins an image tile's caption
+   absolutely to the bottom edge over the picture. This blurb is a figcaption
+   too, but it's a flow item in a text card — left absolute it drops out of
+   order and lands on top of the link below it. */
+/* Selector must out-specify `.meme figcaption` (0,1,1) — a bare
+   `.meme__explain` (0,1,0) loses to it and the reset silently does nothing. */
+.meme--told .meme__explain{position:static;background:none;padding:0;border-radius:0;
+  flex:1 1 auto;min-height:0;overflow:hidden;margin:0;
+  font-size:clamp(.7rem,.82vw,.84rem);line-height:1.45;color:var(--muted)}
+  /* No fade mask here: the grid is sized so the blurbs fit in full, and a
+     bottom-fade gradient dims the last line even when nothing is cut, which
+     reads as blur. If a future month writes a blurb too long for its tile,
+     shorten the text rather than reintroducing a fade. */
+/* Link out to the original instead of shipping a copy of it. Pinned to the
+   bottom of the tile, never overlapped by the blurb above it. */
+.meme__see,.eyememe__see{flex:none;align-self:flex-start;
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--secondary);text-decoration:none;padding:.3rem .6rem;border-radius:999px;
+  border:1px solid var(--border);background:var(--chip-bg);
+  transition:border-color .2s var(--ease),color .2s var(--ease),background .2s var(--ease)}
+.meme__see:hover,.eyememe__see:hover{color:var(--text);border-color:var(--ring);background:var(--hover)}
+
 /* alternating widths: 3 + 2 per row, big side flipping each row (pattern of 4) */
 .meme:nth-child(4n+1){grid-column:span 3}
 .meme:nth-child(4n+4){grid-column:span 3}
@@ -738,6 +790,11 @@ p{color:var(--muted);font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.55;max-wi
 .eyememe__footer{background:#000;color:#fff;text-align:center;padding:.75rem .6rem;font-family:var(--font-meme);
   font-size:1.4rem;line-height:1.05;text-transform:uppercase;-webkit-text-stroke:.4px #000}
 .eyememe__credit{position:absolute;top:6px;right:9px;font-family:var(--font-mono);font-size:.6rem;color:rgba(255,255,255,.55)}
+/* Wrapper so the "See the meme" link can sit under the meme WITHOUT inheriting
+   its rotate(3deg) — rotated text renders soft. `align-self` is overridden
+   because the shared pill rule sets flex-start for the left-aligned card tiles. */
+.eyememe-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.eyememe-wrap .eyememe__see{align-self:center}
 
 /* ---- Slide progress (deliberately subtle) ------------------------------
    A whisper-thin reading line pinned to the bottom edge + a muted "03 / 15"
@@ -922,6 +979,9 @@ html[data-theme="aialight"] .cf-tokenrain{display:none}
 .hx-fig img{display:block;width:100%;max-height:152px;object-fit:contain;background:#fff}
 .hx-fig figcaption{font-family:var(--font-mono);font-size:.66rem;color:var(--muted);text-align:center;
   padding:.32rem .5rem;background:var(--panel);border-top:1px solid var(--border)}
+/* CC BY attribution for the paper's figure — required wherever it's shown. */
+.hx-fig__credit{display:block;font-size:.56rem;line-height:1.35;color:var(--muted);opacity:.75;
+  text-align:center;padding:0 .5rem .32rem;background:var(--panel)}
 
 .hx-bottom{display:grid;grid-template-columns:1.5fr 1fr;gap:1.2rem;align-items:stretch}
 .flips{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
