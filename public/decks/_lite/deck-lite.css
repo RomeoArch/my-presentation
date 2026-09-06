@@ -1,0 +1,45 @@
+/* =============================================================================
+   GenAI-Codeforce decks — LITE MODE stylesheet
+   -----------------------------------------------------------------------------
+   Site-owned, injected into every published deck by scripts/publish-deck.ps1
+   (see deck-lite.js for the why). Everything is gated on html[data-lite], which
+   deck-lite.js sets on phones and tablets, so a desktop loads this file and is
+   left completely untouched. Must be linked AFTER styles.css.
+   ============================================================================= */
+
+/* ---- 1. One slide at a time ---------------------------------------------- */
+/* engine.js builds every slide up front and stacks them at inset:0, hidden with
+   opacity/visibility — so all of them stay laid out, painted and composited for
+   the whole session. This is the single biggest saving. Nothing depends on the
+   hidden slides having a box: the one measurement that does (the agenda rail in
+   initAgenda) re-runs from a MutationObserver each time a slide gains .active. */
+html[data-lite] .slide:not(.active){display:none}
+html[data-lite] .slide{transition:none}
+
+/* ---- 2. No full-screen blur layers --------------------------------------- */
+/* .bg__mesh is a 140%-of-viewport blur(80px), and the cover blobs are a second
+   blur(64px) pair — both animated forever, so Safari re-blurs a screen-sized
+   buffer every frame. The radial gradients underneath are already soft, so
+   dropping the filter costs little and saves the most after (1). */
+html[data-lite] .bg__mesh{filter:none;opacity:.42}
+html[data-lite] .bg__mesh::before,
+html[data-lite] .bg__mesh::after,
+html[data-lite] .bg__mesh i{animation:none}
+
+html[data-lite] .slide[data-id="cover"]::before,
+html[data-lite] .slide[data-id="cover"]::after{filter:none;opacity:.5;animation:none}
+
+/* ---- 3. No backdrop blur, no retained layers ----------------------------- */
+/* Every .panel, .tweet, the lightbox and the command palette blur what is behind
+   them, and each one makes Safari snapshot and blur its backdrop. It is pure
+   decoration — the panels keep their own translucent background. will-change is
+   swept up here too: each declaration pins a compositing layer in memory. */
+html[data-lite] *{
+	backdrop-filter:none!important;
+	-webkit-backdrop-filter:none!important;
+	will-change:auto!important;
+}
+
+/* ---- 4. No blended grain ------------------------------------------------- */
+/* mix-blend-mode pulls the whole background stack into a single blend group. */
+html[data-lite] .bg__noise{display:none}

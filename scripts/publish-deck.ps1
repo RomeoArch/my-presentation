@@ -79,6 +79,27 @@ foreach ($slug in $editions) {
     Write-Host "  + injected noindex meta tag" -ForegroundColor DarkGray
   }
 
+  # Same reasoning for lite mode: the decks are authored for a laptop on a
+  # projector, and mobile Safari kills the tab rather than render one. The two
+  # files live in public/decks/_lite/ (site-owned, shared by every edition) so
+  # the archive folders stay verbatim copies of what was presented. deck-lite.js
+  # must run before the fx/ tags in <body>; deck-lite.css must win over
+  # styles.css, so both are appended to the end of <head>.
+  if ($html -notmatch '(?i)deck-lite\.js') {
+    $lite = @'
+  <link rel="stylesheet" href="../_lite/deck-lite.css">
+  <script src="../_lite/deck-lite.js"></script>
+'@
+    $html = [regex]::Replace(
+      $html,
+      '(?i)(\s*</head>)',
+      "`r`n$lite`$1",
+      [System.Text.RegularExpressions.RegexOptions]::None,
+      [timespan]::FromSeconds(5))
+    Set-Content $indexPath $html -NoNewline -Encoding utf8
+    Write-Host "  + injected mobile lite mode" -ForegroundColor DarkGray
+  }
+
   if (-not (Test-Path (Join-Path $target 'CREDITS.md'))) {
     Write-Warning "  '$slug' has no CREDITS.md - check what's in assets/ before this goes public."
   }
