@@ -168,6 +168,54 @@
 	display: none;
 }
 
+/* Phones and tablets never mount the iframe (see main.js) — they get this
+   poster instead, so the stage is a plain box with a link, not a live deck. */
+.deck-stage.is-poster .deck-stage__placeholder {
+	display: none;
+}
+
+.deck-stage__poster {
+	position: absolute;
+
+	inset: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+
+	padding: 20px;
+
+	text-align: center;
+}
+
+.deck-stage__poster-text {
+	margin: 0;
+
+	max-width: 30ch;
+
+	color: var(--text-secondary);
+
+	font-size: .9rem;
+	line-height: 1.5;
+}
+
+.deck-stage__poster-link {
+	padding: 10px 20px;
+
+	border: 1px solid rgba(58, 109, 240, 0.45);
+	border-radius: 999px;
+
+	background: rgba(58, 109, 240, 0.16);
+
+	color: var(--text);
+
+	font-size: .95rem;
+
+	text-decoration: none;
+}
+
 /* Overlay arrows — they click the deck's own #nav-prev / #nav-next inside the
    iframe, so the slides can be stepped through without focusing the frame. */
 .deck-nav {

@@ -77,11 +77,24 @@
 	const deckStage = document.querySelector("[data-deck-stage]");
 	const deckFrame = document.querySelector("[data-deck-frame]");
 	const deckOpen = document.querySelector("[data-deck-open]");
+	const deckPoster = document.querySelector("[data-deck-poster]");
+	const deckPosterLink = document.querySelector("[data-deck-poster-link]");
 	const deckTabs = Array.from(document.querySelectorAll("[data-deck]"));
 
 	if (deckStage && deckFrame) {
 		const DECK_WIDTH = 1600;
 		let mounted = false;
+
+		// Phones do not get the embed. --deck-scale is a paint-time transform:
+		// the iframe still renders a full 1600x900 document, and the deck keeps
+		// every slide in the DOM at once on top of a dozen canvas/rAF effects,
+		// several backdrop-filter layers and a grain overlay. On iOS Safari
+		// that blows the per-tab memory budget the moment the section scrolls
+		// into view — the renderer is killed and the page reloads itself, which
+		// is exactly the "it refreshes when I reach Last Meetup" crash. Scaled
+		// to a 360px stage the deck would be unreadable anyway, so small and
+		// touch screens get a poster that opens it full-screen in its own tab.
+		const canEmbed = !window.matchMedia("(max-width: 1024px), (pointer: coarse)").matches;
 
 		// BASE_URL is "/" locally and "/my-presentation/" on GitHub Pages (see
 		// vite.config.js). It always ends in a slash. A hardcoded "/decks/..."
@@ -143,15 +156,10 @@
 			});
 		});
 
-		function showDeck(tab) {
+		// Tab state and the two "open it full-screen" links follow the selected
+		// edition on every device — only the iframe is desktop-only.
+		function selectDeck(tab) {
 			const id = tab.getAttribute("data-deck");
-			const label = tab.getAttribute("data-deck-label") || id;
-
-			deckFrame.src = deckUrl(id);
-			deckFrame.title = "Codeforce deck — " + label;
-			deckStage.classList.add("is-loaded");
-
-			if (deckOpen) deckOpen.href = deckUrl(id);
 
 			deckTabs.forEach(function (other) {
 				const isActive = other === tab;
@@ -159,48 +167,74 @@
 				other.setAttribute("aria-pressed", String(isActive));
 			});
 
+			if (deckOpen) deckOpen.href = deckUrl(id);
+			if (deckPosterLink) deckPosterLink.href = deckUrl(id);
+		}
+
+		function showDeck(tab) {
+			const id = tab.getAttribute("data-deck");
+			const label = tab.getAttribute("data-deck-label") || id;
+
+			selectDeck(tab);
+
+			if (!canEmbed) return;
+
+			deckFrame.src = deckUrl(id);
+			deckFrame.title = "Codeforce deck — " + label;
+			deckStage.classList.add("is-loaded");
+
 			mounted = true;
 			fitDeck();
 		}
 
 		deckTabs.forEach(function (tab) {
 			tab.addEventListener("click", function () {
-				if (mounted && tab.classList.contains("is-active")) return;
+				if (canEmbed && mounted && tab.classList.contains("is-active")) return;
 				showDeck(tab);
 			});
 		});
 
-		fitDeck();
-
-		if (window.ResizeObserver) {
-			new ResizeObserver(fitDeck).observe(deckStage);
-		} else {
-			window.addEventListener("resize", fitDeck);
-		}
-
-		// The decks run canvas/rAF effects non-stop, so only load one once the
-		// section is actually on screen.
 		const initial = deckTabs.filter(function (tab) {
 			return tab.classList.contains("is-active");
 		})[0] || deckTabs[0];
 
 		if (initial) {
 			// showDeck() only runs once the section scrolls into view, so point
-			// the fullscreen link at the right deck straight away.
-			if (deckOpen) deckOpen.href = deckUrl(initial.getAttribute("data-deck"));
+			// the fullscreen links at the right deck straight away.
+			selectDeck(initial);
+		}
 
-			if (window.IntersectionObserver) {
-				const observer = new IntersectionObserver(function (entries) {
-					entries.forEach(function (entry) {
-						if (!entry.isIntersecting || mounted) return;
-						observer.disconnect();
-						showDeck(initial);
-					});
-				}, { rootMargin: "200px" });
+		if (!canEmbed) {
+			// No iframe, no ResizeObserver, no fitDeck: swap in the poster and
+			// leave the section as cheap as the rest of the page.
+			deckStage.classList.add("is-poster");
+			if (deckPoster) deckPoster.hidden = false;
+			deckFrame.remove();
+		} else {
+			fitDeck();
 
-				observer.observe(deckStage);
+			if (window.ResizeObserver) {
+				new ResizeObserver(fitDeck).observe(deckStage);
 			} else {
-				showDeck(initial);
+				window.addEventListener("resize", fitDeck);
+			}
+
+			// The decks run canvas/rAF effects non-stop, so only load one once the
+			// section is actually on screen.
+			if (initial) {
+				if (window.IntersectionObserver) {
+					const observer = new IntersectionObserver(function (entries) {
+						entries.forEach(function (entry) {
+							if (!entry.isIntersecting || mounted) return;
+							observer.disconnect();
+							showDeck(initial);
+						});
+					}, { rootMargin: "200px" });
+
+					observer.observe(deckStage);
+				} else {
+					showDeck(initial);
+				}
 			}
 		}
 	}

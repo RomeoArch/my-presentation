@@ -284,6 +284,16 @@
 						allowfullscreen></iframe>
 					<p class="deck-stage__placeholder">Loading deck…</p>
 
+					<!-- Phones and tablets never mount the iframe — the embedded deck is a
+					     full 1600x900 document and iOS Safari kills the tab over it (see
+					     main.js). They get this instead; main.js unhides it and keeps the
+					     link pointed at the selected edition. -->
+					<div class="deck-stage__poster" data-deck-poster hidden>
+						<p class="deck-stage__poster-text">The deck is a full-screen presentation — it runs best on its own.</p>
+						<a class="deck-stage__poster-link" href="decks/2026-06/index.html" target="_blank"
+							rel="noopener noreferrer" data-deck-poster-link>Open the deck ↗</a>
+					</div>
+
 					<!-- Drive the deck's own prev/next from outside the iframe. -->
 					<button type="button" class="deck-nav deck-nav--prev" data-deck-nav="prev"
 						aria-label="Previous slide">‹</button>
