@@ -4,7 +4,7 @@ import { createServer } from 'node:http';
 import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { createHash } from 'node:crypto';
+import { deckContentHash } from './deck-content-hash.mjs';
 
 const root = path.resolve(fileURLToPath(new URL('../public/', import.meta.url)));
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
@@ -79,7 +79,7 @@ try {
 			slides.push({ ...data, image });
 			console.log(`${id}: ${i + 1}/${count} ${data.title} (${data.links.length} links)`);
 		}
-		const contentHash = createHash('sha256').update(await readFile(path.join(root, 'decks', id, 'content.js'))).digest('hex');
+		const contentHash = deckContentHash(await readFile(path.join(root, 'decks', id, 'content.js')));
 		await writeFile(path.join(output, 'slides.json'), JSON.stringify({ width: 1600, height: 900, contentHash, slides }, null, 2));
 	}
 } finally {
