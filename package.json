@@ -5,6 +5,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
+		"prebuild": "node scripts/build-mobile-decks.mjs",
+		"postpublish-deck": "node scripts/build-mobile-decks.mjs",
 		"start": "vite --host",
 		"build": "vite build",
 		"preview": "vite preview",

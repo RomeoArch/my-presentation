@@ -1,3 +1,5 @@
+import { createMobileDeck } from './mobile-deck.js';
+
 (function () {
 	"use strict";
 
@@ -96,8 +98,9 @@
 		// into view — the renderer is killed and the page reloads itself, which
 		// is exactly the "it refreshes when I reach Last Meetup" crash. Scaled
 		// to a 360px stage the deck would be unreadable anyway, so small and
-		// touch screens get a poster that opens it full-screen in its own tab.
+		// touch screens get a static reader with normal document flow instead.
 		const canEmbed = !window.matchMedia("(max-width: 1024px), (pointer: coarse)").matches;
+		let loadMobileDeck;
 
 		// Vite supplies BASE_URL in development and production. If a static host
 		// accidentally serves the source checkout, resolve public/ relative to
@@ -210,7 +213,10 @@
 
 			selectDeck(tab);
 
-			if (!canEmbed) return;
+			if (!canEmbed) {
+				if (loadMobileDeck) loadMobileDeck(deckUrl(id));
+				return;
+			}
 
 			clearInterval(readinessTimer);
 			deckStage.classList.remove("is-loaded", "is-poster");
@@ -245,11 +251,10 @@
 		}
 
 		if (!canEmbed) {
-			// No iframe, no ResizeObserver, no fitDeck: swap in the poster and
-			// leave the section as cheap as the rest of the page.
-			deckStage.classList.add("is-poster");
-			if (deckPoster) deckPoster.hidden = false;
-			deckFrame.remove();
+			// Readable slide content stays on this page; no presentation engine.
+			if (deckOpen) deckOpen.hidden = true;
+			loadMobileDeck = createMobileDeck(deckStage);
+			if (initial) showDeck(initial);
 		} else {
 			fitDeck();
 
