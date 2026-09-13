@@ -1,28 +1,14 @@
-// Render archive content at build time. Phones never run the presentation engine.
-import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises';
-import vm from 'node:vm';
-
+// Validate committed screenshots. Regeneration is explicit, not part of deployment.
+import { readFile, readdir, access } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 const root = new URL('../public/decks/', import.meta.url);
-await mkdir(new URL('_mobile/', root), { recursive: true });
-for (const edition of await readdir(root)) {
-	if (!/^\d{4}-\d{2}$/.test(edition)) continue;
-	const folder = new URL(edition + '/', root);
-	let html = '';
-	const context = vm.createContext({
-		window: {},
-		document: { querySelector: (selector) => {
-			if (selector !== '#deck') throw new Error('Unexpected render dependency: ' + selector);
-			return { set innerHTML(value) { html = value; } };
-		} }
-	});
-	for (const file of ['vendor/qrcode.js', 'content.js']) {
-		vm.runInContext(await readFile(new URL(file, folder), 'utf8'), context);
-	}
-	const source = await readFile(new URL('engine.js', folder), 'utf8');
-	const boot = 'if (document.readyState === "loading")';
-	if (!source.includes(boot)) throw new Error('Unsupported deck engine: ' + edition);
-	vm.runInContext(source.slice(0, source.lastIndexOf(boot)) + 'render();})();', context);
-	if (!html.includes('class="slide"')) throw new Error('No slides: ' + edition);
-	await writeFile(new URL('_mobile/' + edition + '.html', root), html);
-	console.log('Mobile slides: ' + edition);
+for (const id of await readdir(root)) {
+	if (!/^\d{4}-\d{2}$/.test(id)) continue;
+	const folder = new URL('_mobile/' + id + '/', root);
+	const data = JSON.parse(await readFile(new URL('slides.json', folder), 'utf8'));
+	const hash = createHash('sha256').update(await readFile(new URL(id + '/content.js', root))).digest('hex');
+	if (hash !== data.contentHash) throw new Error('Mobile screenshots are stale. Run npm run capture-decks.');
+	if (!data.slides.length) throw new Error('No mobile slides: ' + id);
+	for (const slide of data.slides) await access(new URL(slide.image, folder));
+	console.log('Verified mobile images: ' + id);
 }

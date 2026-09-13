@@ -6,13 +6,15 @@
 	"type": "module",
 	"scripts": {
 		"prebuild": "node scripts/build-mobile-decks.mjs",
-		"postpublish-deck": "node scripts/build-mobile-decks.mjs",
+		"postpublish-deck": "node scripts/capture-mobile-decks.mjs",
 		"start": "vite --host",
 		"build": "vite build",
 		"preview": "vite preview",
-		"publish-deck": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-deck.ps1"
+		"publish-deck": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-deck.ps1",
+		"capture-decks": "node scripts/capture-mobile-decks.mjs"
 	},
 	"devDependencies": {
+		"playwright": "^1.63.0",
 		"vite": "^8.0.3"
 	}
 }

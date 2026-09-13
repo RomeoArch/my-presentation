@@ -98,7 +98,7 @@ import { createMobileDeck } from './mobile-deck.js';
 		// into view — the renderer is killed and the page reloads itself, which
 		// is exactly the "it refreshes when I reach Last Meetup" crash. Scaled
 		// to a 360px stage the deck would be unreadable anyway, so small and
-		// touch screens get a static reader with normal document flow instead.
+		// touch screens get lightweight slide images with clickable link maps.
 		const canEmbed = !window.matchMedia("(max-width: 1024px), (pointer: coarse)").matches;
 		let loadMobileDeck;
 
@@ -251,7 +251,7 @@ import { createMobileDeck } from './mobile-deck.js';
 		}
 
 		if (!canEmbed) {
-			// Readable slide content stays on this page; no presentation engine.
+			// Slide images stay on this page; no presentation engine.
 			if (deckOpen) deckOpen.hidden = true;
 			loadMobileDeck = createMobileDeck(deckStage);
 			if (initial) showDeck(initial);

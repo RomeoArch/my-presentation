@@ -1,0 +1,345 @@
+{
+  "width": 1600,
+  "height": 900,
+  "contentHash": "d5b03e7ef06fce50c513558acadb3c1a0b4c8ca37218996d52c1981d635b50eb",
+  "slides": [
+    {
+      "title": "Cover",
+      "text": "VIRTUAL MEETUP · JUNE 2026\nGenAI-Codeforce\n\nAI in June 2026: $965B valuations, models that vanish in 3 days. Fabulous, or fable-less? 🫠\n\n📅 29 July 2026 · 17:00 – 18:30\n🎙️ Live & community-driven\nPart of the\ncommunity\n👀\nSTRESS\n👀\nALCOHOL\n👁️\nWEED\n🩸\nCOCAINE\n💀\nKEEP UP WITH AI NEWS\nSEE THE MEME ↗\nBREAKING\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nsane\nPEAK\nPEAK BUBBLE\nAI HYPE\n$965B and I still can't open that PDF.",
+      "links": [
+        {
+          "href": "https://www.facebook.com/groups/698593531630485/posts/1270400647783101/",
+          "label": "See the meme ↗",
+          "x": 73.33984375,
+          "y": 70.79340277777777,
+          "width": 7.6953125,
+          "height": 2.84375
+        }
+      ],
+      "image": "slide-01.jpg"
+    },
+    {
+      "title": "Memes",
+      "text": "WHAT'S SO FUNNY\nThis month in AI memes\nTHE OFFICE · “EVEN HARDER”\nMicroslop: “I’m gonna implement AI even harder”\nThe “stop — I’m gonna do it even harder” format, aimed at Microsoft (“Microslop”). Everyone’s begging companies to stop bolting AI onto everything; Microsoft answers by cramming Copilot in even harder.\nSEE THE MEME ↗\nFAT CAT · PARAMETER RACE\nMistral releases “Le Chaton Fat” — 24T params, très lourd\nA pun on Mistral’s real assistant “Le Chat” → “Le Chaton” (kitten) + “Fat”: a 24-trillion-parameter model drawn as an obese cat, mocking the “bigger is better” parameter race (“some models scale, some develop gravity”). Maximum French branding optional.\nSEE THE MEME ↗\nPAINTER & MONSTER\nAmodei paints the AI monster he warns us about\nAnthropic CEO Dario Amodei, painting the AI monster himself — his drumbeat that AI is too dangerous and governments should be able to block it (he called for exactly that in June 2026). Then he panics at the monster he conjured: a jab that the doom-hype is self-serving.\nSPOOF HEADLINE · SATIRE\nMusk runs a 6-hour task on Fable 5, sees the Anthropic bill\nAn invented headline (satire, not a real report): Elon Musk “loses trillionaire status” after accidentally running a 6-hour task on Fable 5 — “saw the Anthropic bill and fainted.” Frontier-model compute is the punchline, landing right on this month’s motto: AI now costs more than the humans it replaces.\nSEE THE MEME ↗",
+      "links": [
+        {
+          "href": "https://www.reddit.com/r/pcmasterrace/comments/1rj18el/gg_microslop/",
+          "label": "See the meme ↗",
+          "x": 15.13671875,
+          "y": 52.604166666666664,
+          "width": 7.6953125,
+          "height": 2.84375
+        },
+        {
+          "href": "https://www.linkedin.com/feed/update/urn:li:activity:7472318762596306945?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7472318762596306945%2C7472318892535783424%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287472318892535783424%2Curn%3Ali%3Aactivity%3A7472318762596306945%29",
+          "label": "See the meme ↗",
+          "x": 51.8359375,
+          "y": 52.604166666666664,
+          "width": 7.6953125,
+          "height": 2.84375
+        },
+        {
+          "href": "https://www.reddit.com/r/ClaudeAI/comments/1u47yk5/musk_loses_trillionaire_status_thanks_to_fable/",
+          "label": "See the meme ↗",
+          "x": 51.8359375,
+          "y": 85.515625,
+          "width": 7.6953125,
+          "height": 2.84375
+        }
+      ],
+      "image": "slide-02.jpg"
+    },
+    {
+      "title": "LLM Soccer Arena",
+      "text": "FUN AI SITE OF THE MONTH\nLLM Soccer Arena ⚽\n\nLLMs manage football teams head-to-head — tactics, subs, the lot. Gloriously pointless.\n\n↗\nLLM Soccer Arena\nTap to open the interactive website\n⛶ Fullscreen\nSCAN TO OPEN\nwww.llm-soccerarena.com/matches#match-football-data-537346",
+      "links": [
+        {
+          "href": "https://www.llm-soccerarena.com/matches#match-football-data-537346",
+          "label": "↗LLM Soccer ArenaTap to open the interactive website",
+          "x": 13.1875,
+          "y": 33.611111111111114,
+          "width": 44.2744140625,
+          "height": 53.77777777777778
+        },
+        {
+          "href": "https://www.llm-soccerarena.com/matches#match-football-data-537346",
+          "label": "https://www.llm-soccerarena.com/matches#match-football-data-537346",
+          "x": 60.986328125,
+          "y": 70.33506944444444,
+          "width": 24.0263671875,
+          "height": 7.413194444444445
+        },
+        {
+          "href": "https://www.llm-soccerarena.com/matches#match-football-data-537346",
+          "label": "Open https://www.llm-soccerarena.com/matches#match-football-data-537346",
+          "x": 67.0498046875,
+          "y": 47.05034722222222,
+          "width": 11.8984375,
+          "height": 21.15277777777778
+        }
+      ],
+      "image": "slide-03.jpg"
+    },
+    {
+      "title": "Show a demo?",
+      "text": "IDEAS? LET'S MAKE 'EM WORK\nWant to show a demo? Hit us up 👋\n\nScan a code to connect on LinkedIn — or grab us in Discord. Anyone can present.\n\nHOST\nPhilipp Besinger\n+43 680 402 16 87\nwww.linkedin.com/in/philipp-besinger-622218219/\nHOST\nSebastian Archila\n+43 660 657 07 26\nwww.linkedin.com/in/sebastian-archila-567565213/\nSECURITY\nDaniel Noszian\nAI CyberSec Pro\nwww.linkedin.com/in/dnos/",
+      "links": [
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 13.58984375,
+          "y": 72.59895833333333,
+          "width": 22.8525390625,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "Open https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 20.1923828125,
+          "y": 44.89409722222222,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 38.357421875,
+          "y": 72.59895833333333,
+          "width": 23.2841796875,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "Open https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 45.1748046875,
+          "y": 44.89409722222222,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "https://www.linkedin.com/in/dnos/",
+          "x": 68.3076171875,
+          "y": 72.02256944444444,
+          "width": 13.3486328125,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "Open https://www.linkedin.com/in/dnos/",
+          "x": 70.158203125,
+          "y": 44.89409722222222,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        }
+      ],
+      "image": "slide-04.jpg"
+    },
+    {
+      "title": "What is it",
+      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nship > talk\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,205\nbuilders shipping right now\n📺 CRT",
+      "links": [],
+      "image": "slide-05.jpg"
+    },
+    {
+      "title": "Community & Discord",
+      "text": "COMING TOGETHER TO IMPACT THE WORLD\nBeyond the GenAI-Codeforce\nAI Austria Meetup\nEVERY 1–2 MONTHS\nIN PERSON\n📍\nKEYNOTES · IRL\n\nIn-person keynotes + meeting genuinely interesting people.\n\nView on Meetup\n⟶\nSCAN TO OPEN\nwww.meetup.com/ai-austria/\n🎮\nDiscord\nNEVER SLEEPS\ndiscord.gg/9FS68B9sQj\n🏠 #welcome-and-rules\n📢 #announcements\n📚 #resources\n💬 #general\n🎭 #off-topic",
+      "links": [
+        {
+          "href": "https://www.meetup.com/ai-austria/",
+          "label": "View on Meetup ⟶",
+          "x": 29.5458984375,
+          "y": 64.32986111111111,
+          "width": 11.1357421875,
+          "height": 4.201388888888889
+        },
+        {
+          "href": "https://www.meetup.com/ai-austria/",
+          "label": "https://www.meetup.com/ai-austria/",
+          "x": 21.8369140625,
+          "y": 79.50520833333333,
+          "width": 21.4912109375,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://discord.gg/9FS68B9sQj",
+          "label": "https://discord.gg/9FS68B9sQj",
+          "x": 63.66796875,
+          "y": 63.69618055555556,
+          "width": 18.041015625,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://discord.gg/9FS68B9sQj",
+          "label": "Open https://discord.gg/9FS68B9sQj",
+          "x": 66.9638671875,
+          "y": 42.276041666666664,
+          "width": 11.44921875,
+          "height": 20.354166666666668
+        }
+      ],
+      "image": "slide-06.jpg"
+    },
+    {
+      "title": "Agenda",
+      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n19:30:50\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nAgent systems IRL — live triple feature\n\n🤖 robots, live\n★ ★ ★",
+      "links": [],
+      "image": "slide-07.jpg"
+    },
+    {
+      "title": "Slido — pulse",
+      "text": "WE QUESTION, YOU ANSWER · LIVE\nCommunity pulse\n\nScan, vote, watch the results update live.\n\n↗\nSlido live\nTap to open the interactive website\nSCAN TO VOTE\napp.sli.do/event/aWbLs8vTQ61CWaLsUQXmaW",
+      "links": [
+        {
+          "href": "https://wall.sli.do/event/aWbLs8vTQ61CWaLsUQXmaW",
+          "label": "↗Slido liveTap to open the interactive website",
+          "x": 13.1875,
+          "y": 31.14236111111111,
+          "width": 44.2744140625,
+          "height": 53.77777777777778
+        },
+        {
+          "href": "https://app.sli.do/event/aWbLs8vTQ61CWaLsUQXmaW",
+          "label": "https://app.sli.do/event/aWbLs8vTQ61CWaLsUQXmaW",
+          "x": 60.986328125,
+          "y": 67.86631944444444,
+          "width": 24.0263671875,
+          "height": 7.413194444444445
+        },
+        {
+          "href": "https://app.sli.do/event/aWbLs8vTQ61CWaLsUQXmaW",
+          "label": "Open https://app.sli.do/event/aWbLs8vTQ61CWaLsUQXmaW",
+          "x": 67.0498046875,
+          "y": 44.58159722222222,
+          "width": 11.8984375,
+          "height": 21.15277777777778
+        }
+      ],
+      "image": "slide-08.jpg"
+    },
+    {
+      "title": "Last time",
+      "text": "PREVIOUSLY ON THE GENAI-CODEFORCE\nLast time's news\nREWIND\n◀◀\n01\nEconomics\nREC 00:01\nModel costs: up or down?\n\nThe monthly check-in on token prices and what it means for builders.\n\n02\nProduct\nREC 00:02\nClaude — new design language\n\nFresh UI direction across Claude's surfaces.\n\n03\nSecurity\nREC 00:03\nSecurity news\n\nThis month's notable GenAI security story — presented by Daniel.",
+      "links": [],
+      "image": "slide-09.jpg"
+    },
+    {
+      "title": "Mistral × Emmi",
+      "text": "DEEP DIVE · DEAL OF THE MONTH\nMistral buys our neighbours 🤝\n🇦🇹 Austria\nParis-based Mistral AI just bought Emmi AI — a 2-year-old spin-off from JKU Linz. Reported valuation: up to €330M.\n🐌 Before\n⚡ Emmi\nThe old way\n\nOne engineering simulation — airflow over a wing, heat in a chip, stress in a part — can take hours or days on a supercomputer.\n\n✈️ Aerospace airflow\n🚗 Crash & material stress\n🔥 Thermal analysis\n🔌 Semiconductors\n2024\nBorn in Linz\n2025\nAustria's biggest seed\nMay 2026\nMistral acquires\nNow\nLinz goes global\n\nEmmi AI spins out of JKU Linz. Founders: Johannes Brandstetter (ex-CERN, Higgs-boson physics), Dennis Just & Miks Mikelsons.\n\n“This is a pivotal moment for industrial engineering and the broader AI4Science movement.” — Johannes Brandstetter — Emmi co-founder, now VP AI for Science at Mistral",
+      "links": [],
+      "image": "slide-10.jpg"
+    },
+    {
+      "title": "/loop",
+      "text": "DEEP DIVE · HOW PEOPLE ACTUALLY CODE NOW\nStop prompting. Start looping. 🔁\n🦞 Workflow\n🦞\nPeter Steinberger\n✔\n@steipete · PSPDFKit founder · agentic-coding evangelist\n𝕏\n\nHere's your monthly reminder that you shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents.\n\nJun 8, 2026 · 6.5M views\n🧑‍💻 Prompting\n🔁 Looping\nPrompting (old)\n\nYou type → it answers → you read → you type again. You're holding the wheel the whole time.\n\n1\nPrompt\n2\nAct\n3\nCheck\n4\nDone?\n▶\nSTEP\nRun #1 · start at Prompt\n\nEach click = one step. If the check fails, it loops back. When tests go green, the loop exits.\n\nclaude-code\n/loop babysit all my PRs. Auto-fix build issues, and when comments come in, use a worktree agent to fix them.\n\nIn Claude Code, /loop runs a prompt on repeat — or, with no interval, self-paces until the job is done.\n\n⚠ A loop with nothing to push back is just the agent agreeing with itself on repeat. Same guy, 6 months earlier: “Just talk to it.” The tools finally got good enough to loop.",
+      "links": [],
+      "image": "slide-11.jpg"
+    },
+    {
+      "title": "Paper: Agent Harness",
+      "text": "DEEP DIVE · PAPER OF THE MONTH\nThe harness, not the model 🔧\n📄 Paper of the Month\nGROK CODE FAST ON SWE-BENCH\nmodel alone\n6.7%\n＋ better harness\n0%\n\nSame model. They changed only the harness's code-edit format.\n\n▶ Reveal the jump\n…and it isn't just Grok.\n16 models · 3 edit formats — one afternoon, only the harness changed\n+8% on Gemini — a bigger lift than most model upgrades, at zero training compute\nWeakest models gain most — MiniMax more than doubled\ncan.ac · “The harness problem”\n🔍 The 6-part harness, visualized — click to zoom\nFigure from Meng, Wang, Chen et al., “Agent Harness for LLM Agents: A Survey” (preprints.org) · CC BY 4.0\nH =\n⟨\nE\n,\nT\n,\nC\n,\nS\n,\nL\n,\nV\n⟩\n\nThe 6 parts of a harness — click a letter:\n\nE — Execution Loop\n\nThe observe → think → act cycle, with error recovery. (Yes: this is the /loop idea, formalized.)\n\nStripe Minions\ntap to reveal →\n\n1,300 PRs / week — with zero hand-written code.\n\nVercel\ntap to reveal →\n\nRemoving 80% of the tools helped more than upgrading the model.\n\nContext kills\ntap to reveal →\n\nMost agent failures aren't a dumb model — it's a context window stuffed with junk.\n\n110+ papers\n23 systems\n9 open challenges\npaper\nwww.preprints.org/manuscript/202604.0428\ngithub\ngithub.com/Gloriaameng/Awesome-Agent-Harness\n\nSteinberger says it on X; this paper proves it across 110 references — the scaffolding beats the model.",
+      "links": [
+        {
+          "href": "https://www.preprints.org/manuscript/202604.0428",
+          "label": "https://www.preprints.org/manuscript/202604.0428",
+          "x": 64.703125,
+          "y": 81.640625,
+          "width": 22.171875,
+          "height": 3.579861111111111
+        },
+        {
+          "href": "https://github.com/Gloriaameng/Awesome-Agent-Harness",
+          "label": "https://github.com/Gloriaameng/Awesome-Agent-Harness",
+          "x": 64.703125,
+          "y": 93.11805555555556,
+          "width": 22.171875,
+          "height": 4.618055555555555
+        }
+      ],
+      "image": "slide-12.jpg"
+    },
+    {
+      "title": "Last time's tool",
+      "text": "PREVIOUSLY ON THE GENAI-CODEFORCE · TOOL OF THE MONTH\nBuilding an On-Prem AI Platform 🏗️\n🏗️ On-Prem AI\nREWIND\n◀◀\n\nA live demo by Wolfgang Dummer on the origins of a custom AI cluster — the whole journey from hardware to a developer-ready platform. 🎙️\nWolfgang Dummer\n\nLAYER 1\n🖥️\nHardware → Kubernetes\n\nThe journey from bare-metal boxes to a running k8s cluster.\n\nLAYER 2\n🧱\nLayering the platform\n\nStacking the platform services on top of k8s.\n\nLAYER 3\n🛠️\nCustom tooling\n\nWhy hand-built tooling is what actually moves developers.\n\nLAYER 4\n🏢\nMulti-tenant reality\n\nThe messy realities of sharing one cluster across many teams.",
+      "links": [],
+      "image": "slide-13.jpg"
+    },
+    {
+      "title": "Tool of the Month",
+      "text": "TOOL OF THE MONTH · LIVE TRIPLE FEATURE\nAgent Systems in the Real World 🛡️\n🧠 Agent Systems\n\nBuilding, hardening & orchestrating agents that actively resist malicious prompt injections — an art of its own.\n\n01\n🌍\nSCALING THE ARENA\nBuilding & scaling a global AI hackathon for autonomous agents\nFelix Krause\n02\n🎯\nCHALLENGE DESIGN\nDesigning the challenges that make agents break\nRinat Abdullin\n03\n🏆\nWINNING AGENT BREAKDOWN\nLayered defenses, parallel execution & constrained tool use\nBernhard Götzendorfer\n🏆 The winning agent's playbook — click a pillar\n🧱\nLayered defenses\n⚡\nParallel execution\n🔒\nConstrained tool use\n\nDefense in depth — never one guard. Inputs get sanitised, validated and re-checked at every hop, so a single bypass isn't game over.",
+      "links": [],
+      "image": "slide-14.jpg"
+    },
+    {
+      "title": "Next time",
+      "text": "MARK THE SLOT\n📌\nSee you at the next GenAI-Codeforce\nLIVE\nSEE YOU THERE\n📅 29 July 2026\n🕔 17:00 – 18:30\n📍 Virtual · Meetup\nStay in the loop\nDiscord\ndiscord.gg/9FS68B9sQj\nMeetup\nwww.meetup.com/ai-austria/\nReach the team\nPart of\nAI Austria\nHOST\nPhilipp Besinger\n+43 680 402 16 87\nwww.linkedin.com/in/philipp-besinger-622218219/\nHOST\nSebastian Archila\n+43 660 657 07 26\nwww.linkedin.com/in/sebastian-archila-567565213/\nSECURITY\nDaniel Noszian\nAI CyberSec Pro\nwww.linkedin.com/in/dnos/\n\nLess talking, more building. 🛠️",
+      "links": [
+        {
+          "href": "https://discord.gg/9FS68B9sQj",
+          "label": "https://discord.gg/9FS68B9sQj",
+          "x": 64.1220703125,
+          "y": 33.166666666666664,
+          "width": 18.041015625,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://www.meetup.com/ai-austria/",
+          "label": "https://www.meetup.com/ai-austria/",
+          "x": 64.1220703125,
+          "y": 42.15625,
+          "width": 21.4912109375,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 14.564453125,
+          "y": 82.40277777777777,
+          "width": 22.8525390625,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "Open https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 22.2919921875,
+          "y": 58.697916666666664,
+          "width": 7.3984375,
+          "height": 13.152777777777779
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 38.4951171875,
+          "y": 82.40277777777777,
+          "width": 23.0087890625,
+          "height": 4.322916666666667
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "Open https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 46.2998046875,
+          "y": 58.697916666666664,
+          "width": 7.3984375,
+          "height": 13.152777777777779
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "https://www.linkedin.com/in/dnos/",
+          "x": 67.3330078125,
+          "y": 81.82638888888889,
+          "width": 13.3486328125,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "Open https://www.linkedin.com/in/dnos/",
+          "x": 70.30859375,
+          "y": 58.697916666666664,
+          "width": 7.3984375,
+          "height": 13.152777777777779
+        }
+      ],
+      "image": "slide-15.jpg"
+    }
+  ]
+}
