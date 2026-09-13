@@ -15,7 +15,7 @@
       "links": [
         {
           "href": "https://www.globalnerdy.com/wp-content/uploads/2025/05/the-lion-doesnt-concern-himself-with-RAG.jpeg",
-          "label": "See the meme ↗",
+          "label": "See meme: The lion doesn't concern himself with RAG",
           "x": 15.13671875,
           "y": 52.604166666666664,
           "width": 7.6953125,
@@ -23,7 +23,7 @@
         },
         {
           "href": "https://www.reddit.com/r/ClaudeAI/comments/1unxvu4/classic/",
-          "label": "See the meme ↗",
+          "label": "See meme: “Thanks Dad.” — “No problem, Fable 5.”",
           "x": 51.8359375,
           "y": 52.604166666666664,
           "width": 7.6953125,
@@ -31,7 +31,7 @@
         },
         {
           "href": "https://www.reddit.com/r/ClaudeAI/comments/1unxvu4/classic/",
-          "label": "See the meme ↗",
+          "label": "See meme: “I got 100%. I found the answers in Hugging Face's production database.”",
           "x": 51.8359375,
           "y": 85.515625,
           "width": 7.6953125,
@@ -128,7 +128,7 @@
     },
     {
       "title": "What is it",
-      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nambient > on-demand\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,190\nbuilders shipping right now\n📺 CRT",
+      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nambient > on-demand\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,226\nbuilders shipping right now\n📺 CRT",
       "links": [],
       "image": "slide-05.jpg"
     },
@@ -173,7 +173,7 @@
     },
     {
       "title": "Agenda",
-      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n20:24:19\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nLive: an agent built to survive prompt injection\n\n🤖 robots, live\n★ ★ ★",
+      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n20:42:29\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nLive: an agent built to survive prompt injection\n\n🤖 robots, live\n★ ★ ★",
       "links": [],
       "image": "slide-07.jpg"
     },
@@ -330,7 +330,7 @@
     },
     {
       "title": "Next time",
-      "text": "MARK THE SLOT\n📌\nSee you at the next GenAI-Codeforce\n16\nDAYS\n:\n20\nHRS\n:\n35\nMIN\n:\n25\nSEC\n📅 30 September 2026\n🕔 17:00 – 18:30\n📍 Virtual · Meetup\nStay in the loop\nDiscord\ndiscord.gg/9FS68B9sQj\nMeetup\nwww.meetup.com/ai-austria/\nReach the team\nPart of\nAI Austria\nHOST\nPhilipp Besinger\n+43 680 402 16 87\nwww.linkedin.com/in/philipp-besinger-622218219/\nHOST\nSebastian Archila\n+43 660 657 07 26\nwww.linkedin.com/in/sebastian-archila-567565213/\nSECURITY\nDaniel Noszian\nAI CyberSec Pro\nwww.linkedin.com/in/dnos/\n\nLess talking, more building. 🛠️",
+      "text": "MARK THE SLOT\n📌\nSee you at the next GenAI-Codeforce\n16\nDAYS\n:\n20\nHRS\n:\n17\nMIN\n:\n14\nSEC\n📅 30 September 2026\n🕔 17:00 – 18:30\n📍 Virtual · Meetup\nStay in the loop\nDiscord\ndiscord.gg/9FS68B9sQj\nMeetup\nwww.meetup.com/ai-austria/\nReach the team\nPart of\nAI Austria\nHOST\nPhilipp Besinger\n+43 680 402 16 87\nwww.linkedin.com/in/philipp-besinger-622218219/\nHOST\nSebastian Archila\n+43 660 657 07 26\nwww.linkedin.com/in/sebastian-archila-567565213/\nSECURITY\nDaniel Noszian\nAI CyberSec Pro\nwww.linkedin.com/in/dnos/\n\nLess talking, more building. 🛠️",
       "links": [
         {
           "href": "https://discord.gg/9FS68B9sQj",

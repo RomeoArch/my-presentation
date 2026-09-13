@@ -5,7 +5,7 @@
   "slides": [
     {
       "title": "Cover",
-      "text": "VIRTUAL MEETUP · JUNE 2026\nGenAI-Codeforce\n\nAI in June 2026: $965B valuations, models that vanish in 3 days. Fabulous, or fable-less? 🫠\n\n📅 29 July 2026 · 17:00 – 18:30\n🎙️ Live & community-driven\nPart of the\ncommunity\nBREAKING\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nsane\nPEAK\nPEAK BUBBLE\nAI HYPE\nExport-controlled, baby. 😎",
+      "text": "VIRTUAL MEETUP · JUNE 2026\nGenAI-Codeforce\n\nAI in June 2026: $965B valuations, models that vanish in 3 days. Fabulous, or fable-less? 🫠\n\n📅 29 July 2026 · 17:00 – 18:30\n🎙️ Live & community-driven\nPart of the\ncommunity\nBREAKING\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nsane\nPEAK\nPEAK BUBBLE\nAI HYPE\nMy context window outlasts this bubble market.",
       "links": [],
       "image": "slide-01.jpg"
     },
@@ -15,7 +15,7 @@
       "links": [
         {
           "href": "https://www.reddit.com/r/pcmasterrace/comments/1rj18el/gg_microslop/",
-          "label": "See the meme ↗",
+          "label": "See meme: Microslop: “I’m gonna implement AI even harder”",
           "x": 15.13671875,
           "y": 52.604166666666664,
           "width": 7.6953125,
@@ -23,7 +23,7 @@
         },
         {
           "href": "https://www.linkedin.com/feed/update/urn:li:activity:7472318762596306945?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7472318762596306945%2C7472318892535783424%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287472318892535783424%2Curn%3Ali%3Aactivity%3A7472318762596306945%29",
-          "label": "See the meme ↗",
+          "label": "See meme: Mistral releases “Le Chaton Fat” — 24T params, très lourd",
           "x": 51.8359375,
           "y": 52.604166666666664,
           "width": 7.6953125,
@@ -31,7 +31,7 @@
         },
         {
           "href": "https://www.reddit.com/r/Anthropic/comments/1u4tvxc/fable_5s_situation_is_hilarious/",
-          "label": "See the meme ↗",
+          "label": "See meme: Amodei paints the AI monster he warns us about",
           "x": 15.13671875,
           "y": 85.515625,
           "width": 7.6953125,
@@ -39,7 +39,7 @@
         },
         {
           "href": "https://www.reddit.com/r/ClaudeAI/comments/1u47yk5/musk_loses_trillionaire_status_thanks_to_fable/",
-          "label": "See the meme ↗",
+          "label": "See meme: Musk runs a 6-hour task on Fable 5, sees the Anthropic bill",
           "x": 51.8359375,
           "y": 85.515625,
           "width": 7.6953125,
@@ -136,7 +136,7 @@
     },
     {
       "title": "What is it",
-      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nship > talk\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,222\nbuilders shipping right now\n📺 CRT",
+      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nship > talk\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,191\nbuilders shipping right now\n📺 CRT",
       "links": [],
       "image": "slide-05.jpg"
     },
@@ -181,7 +181,7 @@
     },
     {
       "title": "Agenda",
-      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n20:28:50\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nAgent systems IRL — live triple feature\n\n🤖 robots, live\n★ ★ ★",
+      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n20:41:55\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nAgent systems IRL — live triple feature\n\n🤖 robots, live\n★ ★ ★",
       "links": [],
       "image": "slide-07.jpg"
     },

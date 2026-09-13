@@ -77,8 +77,11 @@ export function createMobileDeck(stage) {
 			anchor.className = 'mobile-deck__hotspot';
 			Object.assign(anchor.style, { left: link.x + '%', top: link.y + '%', width: link.width + '%', height: link.height + '%' });
 			picture.append(anchor);
-			if (seen.has(href)) continue;
-			seen.add(href);
+			// Dedupe on href, so a QR and its URL row collapse to one entry. Meme links
+			// are named per meme, so two memes that share a URL both stay listed.
+			const key = link.label.startsWith('See meme: ') ? href + '\n' + link.label : href;
+			if (seen.has(key)) continue;
+			seen.add(key);
 			const item = document.createElement('li');
 			const textLink = anchor.cloneNode();
 			textLink.removeAttribute('class'); textLink.removeAttribute('style');

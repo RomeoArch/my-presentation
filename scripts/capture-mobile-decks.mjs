@@ -66,7 +66,13 @@ try {
 					if (right <= x || bottom <= y) return;
 					links.push({ href, label: (label || href).trim(), x: x / 16, y: y / 9, width: (right - x) / 16, height: (bottom - y) / 9 });
 				};
-				active.querySelectorAll('a[href]').forEach(el => add(el, el.href, el.textContent));
+				active.querySelectorAll('a[href]').forEach(el => {
+					// A bare "See the meme ↗" is meaningless in the phone link list, which
+					// shows labels without their card. Name the meme instead.
+					const card = el.classList.contains('meme__see') ? el.closest('.meme') : null;
+					const title = card?.querySelector('.meme__punchline')?.textContent.trim();
+					add(el, el.href, title ? `See meme: ${title}` : el.textContent);
+				});
 				active.querySelectorAll('[data-copy]').forEach(el => {
 					const row = el.closest('.linkmono') || el;
 					add(row, el.dataset.copy, el.dataset.copy);
