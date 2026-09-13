@@ -2,6 +2,10 @@
 import { readFile, readdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const root = new URL('../public/decks/', import.meta.url);
+// GitHub's branch publisher otherwise drops _mobile/ and _lite/. Keep the
+// marker in both the source root and public/ (copied to the Vite build root).
+await access(new URL('../.nojekyll', import.meta.url));
+await access(new URL('../public/.nojekyll', import.meta.url));
 for (const id of await readdir(root)) {
 	if (!/^\d{4}-\d{2}$/.test(id)) continue;
 	const folder = new URL('_mobile/' + id + '/', root);

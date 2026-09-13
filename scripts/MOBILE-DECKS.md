@@ -1,5 +1,10 @@
 # Mobile slide images
 
+Keep `.nojekyll` in the repository root and `public/`. Without it, GitHub
+Pages' branch publisher excludes the underscore-prefixed `_mobile/` and
+`_lite/` folders, causing mobile-only 404s even though desktop decks load.
+The intended deployment remains the GitHub Actions Vite build.
+
 Mobile devices display the archived deck as 1600 × 900 JPEGs with percentage-based
 link overlays. Only the current image is mounted. The desktop viewer is unchanged.
 Images preserve the presentation design, but freeze animations and interactive
