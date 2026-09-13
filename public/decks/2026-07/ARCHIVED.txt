@@ -1,0 +1,6 @@
+GenAI-Codeforce - archived session
+Edition : July 2026
+Archived: 2026-09-12 12:14
+Motto   : AI in July 2026: **65%** of Anthropic's code now ships from a teammate who lives in Slack. The other **35%**? Humans, picking up the **slack**. 💬🫠
+
+Open index.html in this folder to present this session exactly as it was.

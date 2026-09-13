@@ -240,6 +240,15 @@ import { createMobileDeck } from './mobile-deck.js';
 			});
 		});
 
+		document.querySelectorAll('[data-deck-link]').forEach(function (link) {
+			link.addEventListener('click', function () {
+				const tab = deckTabs.find(function (item) {
+					return item.getAttribute('data-deck') === link.getAttribute('data-deck-link');
+				});
+				if (tab) tab.click();
+			});
+		});
+
 		const initial = deckTabs.filter(function (tab) {
 			return tab.classList.contains("is-active");
 		})[0] || deckTabs[0];

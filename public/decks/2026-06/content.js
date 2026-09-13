@@ -32,14 +32,15 @@ window.CODEFORCE = {
   },
 
   /* ---- Cover meme (the "keep up with AI news" eyes meme) ------------------
-     Rendered from code (rows / skull / footer) so it always matches the active
-     theme — and so the archive ships nothing we don't own. Do NOT set `image`
-     to a picture found online: this deck is published publicly on GitHub Pages,
-     which makes it an act of publication, not a talk. See CREDITS.md. */
+     `image` is OUR OWN picture (made by the Codeforce team, also on the July
+     2026 cover), so it is fine to ship in the public archive. Do NOT set
+     `image` to a picture found online: this deck is published publicly on
+     GitHub Pages, which makes it an act of publication, not a talk. Remove
+     `image` to fall back to the code-drawn version (rows / skull / footer).
+     See CREDITS.md. */
   coverMeme: {
-    // Link to the original post. Renders a "See the meme" button under the
-    // cover meme; remove the url and the button disappears.
-    url: "https://www.facebook.com/groups/698593531630485/posts/1270400647783101/",
+    image: "assets/memes/keep_up_with_AI_news.png",
+    // --- fallback (used only if `image` is removed) ---
     rows: [
       { label: "STRESS",  eyes: "👀" },
       { label: "ALCOHOL", eyes: "👀" },
@@ -101,7 +102,7 @@ window.CODEFORCE = {
       caption: "Mistral releases “Le Chaton Fat” — 24T params, très lourd",
       explain: "A pun on Mistral’s real assistant “Le Chat” → “Le Chaton” (kitten) + “Fat”: a 24-trillion-parameter model drawn as an obese cat, mocking the “bigger is better” parameter race (“some models scale, some develop gravity”). Maximum French branding optional." },
     { format: "Painter & monster",
-      url: "",   // ← TODO: no link supplied for this one, so its card shows no button
+      url: "https://www.reddit.com/r/Anthropic/comments/1u4tvxc/fable_5s_situation_is_hilarious/",
       caption: "Amodei paints the AI monster he warns us about",
       explain: "Anthropic CEO Dario Amodei, painting the AI monster himself — his drumbeat that AI is too dangerous and governments should be able to block it (he called for exactly that in June 2026). Then he panics at the monster he conjured: a jab that the doom-hype is self-serving." },
     { format: "Spoof headline · satire",

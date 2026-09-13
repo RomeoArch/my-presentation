@@ -56,7 +56,7 @@ Open **`content.js`**, edit the values, save, refresh the browser. Everything is
 - **`meta`** — edition label + the big cover motto + which theme loads first.
 - **`next`** — date/time of the next GenAI-Codeforce. Drives the live **countdown** on the closing slide. Set `dateISO` precisely (it controls the timer).
 - **`presenters`** — names + **LinkedIn URLs**. QR codes are generated automatically — just paste real profile URLs (replace the `REPLACE-...` placeholders).
-- **`coverMeme`** — the meme on the cover, drawn from code (`rows` / `skull` / `footer`) so it matches the active theme. Setting `image` to a picture found online would put a work we don't own on a public website — don't. See `CREDITS.md`.
+- **`coverMeme`** — the meme on the cover. `image` points at our own picture (`assets/memes/keep_up_with_AI_news.png`); remove it to fall back to the theme-matched code-drawn version (`rows` / `skull` / `footer`). Never set `image` to a picture found online — this archive is public. See `CREDITS.md`.
 - **`memes`** — the month's jokes, **described rather than reproduced**: `format` (the template), `caption` (the punchline), `explain` (why it's funny). Tell the joke when presenting and pull the image up live if you want the visual — but keep it out of the archive. Use `{ type:"link", url, label }` for a meme-site shoutout (renders a QR).
 - **`events`**, **`discordChannels`**, **`agenda`** — community intro, Discord channel list, running order.
 - **`slido`** — see below.

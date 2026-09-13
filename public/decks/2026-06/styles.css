@@ -308,7 +308,7 @@ p{color:var(--muted);font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.55;max-wi
   height:min(68vh,calc(100dvh - 18rem))}
 .memes:has(.meme--told) .meme{grid-column:span 1}
 .meme--told{display:flex;flex-direction:column;gap:.5rem;justify-content:flex-start;
-  padding:1.15rem 1.2rem;text-align:left;cursor:default;overflow:hidden}
+  padding:1.15rem 1.2rem;text-align:left;cursor:zoom-in;overflow:hidden}
 /* Sit these tiles square on the pixel grid. The nth-child `rotate()` above is
    the scattered-polaroid look for PICTURE tiles, but rotating a text tile
    resamples the glyphs and kills subpixel antialiasing, so the blurb renders
@@ -385,6 +385,15 @@ p{color:var(--muted);font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.55;max-wi
 .lb-cap[hidden]{display:none}
 .lb-cap__t{display:block;font-family:var(--font-display);font-size:1.05rem;color:var(--text);margin-bottom:.25rem}
 .lb-cap__b{display:block;font-size:.92rem;line-height:1.5;color:var(--muted)}
+/* An enlarged text meme card (see initLightbox). Same parts as the tile,
+   scaled up for reading; the "See the meme" link stays clickable. */
+.lb-card{display:flex;flex-direction:column;gap:1rem;width:min(86vw,820px);max-height:88vh;overflow:auto;
+  padding:2rem 2.2rem;text-align:left;cursor:default;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.lb-card[hidden]{display:none}
+.lb-card .meme__format{font-size:.85rem}
+.lb-card .meme__punchline{font-size:clamp(1.5rem,2.6vw,2.2rem);border-left-width:4px;padding-left:1rem}
+.lb-card .meme__explain{font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.6;color:var(--muted)}
+.lb-card .meme__see{font-size:.8rem;padding:.45rem .85rem}
 
 /* fullscreen button overlaid on a fun-site embed */
 .embed-fs{position:absolute;top:.7rem;right:.7rem;z-index:5;

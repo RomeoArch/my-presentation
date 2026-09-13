@@ -1,26 +1,17 @@
 {
   "width": 1600,
   "height": 900,
-  "contentHash": "4daed4c7890f4daad14d2f58f51eef65cada81966d6abda0bd561febcc348e48",
+  "contentHash": "fc2d60db22288a293eed7a83e0bfafbc64bc58192c4f9f75657aebc581d5d00d",
   "slides": [
     {
       "title": "Cover",
-      "text": "VIRTUAL MEETUP · JUNE 2026\nGenAI-Codeforce\n\nAI in June 2026: $965B valuations, models that vanish in 3 days. Fabulous, or fable-less? 🫠\n\n📅 29 July 2026 · 17:00 – 18:30\n🎙️ Live & community-driven\nPart of the\ncommunity\n👀\nSTRESS\n👀\nALCOHOL\n👁️\nWEED\n🩸\nCOCAINE\n💀\nKEEP UP WITH AI NEWS\nSEE THE MEME ↗\nBREAKING\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nsane\nPEAK\nPEAK BUBBLE\nAI HYPE\n$965B and I still can't open that PDF.",
-      "links": [
-        {
-          "href": "https://www.facebook.com/groups/698593531630485/posts/1270400647783101/",
-          "label": "See the meme ↗",
-          "x": 73.33984375,
-          "y": 70.79340277777777,
-          "width": 7.6953125,
-          "height": 2.84375
-        }
-      ],
+      "text": "VIRTUAL MEETUP · JUNE 2026\nGenAI-Codeforce\n\nAI in June 2026: $965B valuations, models that vanish in 3 days. Fabulous, or fable-less? 🫠\n\n📅 29 July 2026 · 17:00 – 18:30\n🎙️ Live & community-driven\nPart of the\ncommunity\nBREAKING\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nAnthropic launches Claude Fable 5 — its most powerful model\n◆\n…then pulls it 72 hours later under a US export-control directive\n◆\nAnthropic files confidentially for IPO at a $965B valuation\n◆\nOpenAI follows 8 days later — also files for IPO, last valued ~$852B\n◆\nAnthropic's \"When AI builds itself\" urges a global pause on frontier AI\n◆\nProject Glasswing: Anthropic's agent flags 10,000+ critical software bugs in a month\n◆\nMistral acquires Austria's Emmi AI (JKU Linz spin-off)\n◆\nMeta earmarks $115–135B for AI in 2026; Microsoft nears $190B capex\n◆\nsane\nPEAK\nPEAK BUBBLE\nAI HYPE\nExport-controlled, baby. 😎",
+      "links": [],
       "image": "slide-01.jpg"
     },
     {
       "title": "Memes",
-      "text": "WHAT'S SO FUNNY\nThis month in AI memes\nTHE OFFICE · “EVEN HARDER”\nMicroslop: “I’m gonna implement AI even harder”\nThe “stop — I’m gonna do it even harder” format, aimed at Microsoft (“Microslop”). Everyone’s begging companies to stop bolting AI onto everything; Microsoft answers by cramming Copilot in even harder.\nSEE THE MEME ↗\nFAT CAT · PARAMETER RACE\nMistral releases “Le Chaton Fat” — 24T params, très lourd\nA pun on Mistral’s real assistant “Le Chat” → “Le Chaton” (kitten) + “Fat”: a 24-trillion-parameter model drawn as an obese cat, mocking the “bigger is better” parameter race (“some models scale, some develop gravity”). Maximum French branding optional.\nSEE THE MEME ↗\nPAINTER & MONSTER\nAmodei paints the AI monster he warns us about\nAnthropic CEO Dario Amodei, painting the AI monster himself — his drumbeat that AI is too dangerous and governments should be able to block it (he called for exactly that in June 2026). Then he panics at the monster he conjured: a jab that the doom-hype is self-serving.\nSPOOF HEADLINE · SATIRE\nMusk runs a 6-hour task on Fable 5, sees the Anthropic bill\nAn invented headline (satire, not a real report): Elon Musk “loses trillionaire status” after accidentally running a 6-hour task on Fable 5 — “saw the Anthropic bill and fainted.” Frontier-model compute is the punchline, landing right on this month’s motto: AI now costs more than the humans it replaces.\nSEE THE MEME ↗",
+      "text": "WHAT'S SO FUNNY\nThis month in AI memes\nTHE OFFICE · “EVEN HARDER”\nMicroslop: “I’m gonna implement AI even harder”\nThe “stop — I’m gonna do it even harder” format, aimed at Microsoft (“Microslop”). Everyone’s begging companies to stop bolting AI onto everything; Microsoft answers by cramming Copilot in even harder.\nSEE THE MEME ↗\nFAT CAT · PARAMETER RACE\nMistral releases “Le Chaton Fat” — 24T params, très lourd\nA pun on Mistral’s real assistant “Le Chat” → “Le Chaton” (kitten) + “Fat”: a 24-trillion-parameter model drawn as an obese cat, mocking the “bigger is better” parameter race (“some models scale, some develop gravity”). Maximum French branding optional.\nSEE THE MEME ↗\nPAINTER & MONSTER\nAmodei paints the AI monster he warns us about\nAnthropic CEO Dario Amodei, painting the AI monster himself — his drumbeat that AI is too dangerous and governments should be able to block it (he called for exactly that in June 2026). Then he panics at the monster he conjured: a jab that the doom-hype is self-serving.\nSEE THE MEME ↗\nSPOOF HEADLINE · SATIRE\nMusk runs a 6-hour task on Fable 5, sees the Anthropic bill\nAn invented headline (satire, not a real report): Elon Musk “loses trillionaire status” after accidentally running a 6-hour task on Fable 5 — “saw the Anthropic bill and fainted.” Frontier-model compute is the punchline, landing right on this month’s motto: AI now costs more than the humans it replaces.\nSEE THE MEME ↗",
       "links": [
         {
           "href": "https://www.reddit.com/r/pcmasterrace/comments/1rj18el/gg_microslop/",
@@ -35,6 +26,14 @@
           "label": "See the meme ↗",
           "x": 51.8359375,
           "y": 52.604166666666664,
+          "width": 7.6953125,
+          "height": 2.84375
+        },
+        {
+          "href": "https://www.reddit.com/r/Anthropic/comments/1u4tvxc/fable_5s_situation_is_hilarious/",
+          "label": "See the meme ↗",
+          "x": 15.13671875,
+          "y": 85.515625,
           "width": 7.6953125,
           "height": 2.84375
         },
@@ -137,7 +136,7 @@
     },
     {
       "title": "What is it",
-      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nship > talk\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,205\nbuilders shipping right now\n📺 CRT",
+      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nship > talk\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,222\nbuilders shipping right now\n📺 CRT",
       "links": [],
       "image": "slide-05.jpg"
     },
@@ -182,7 +181,7 @@
     },
     {
       "title": "Agenda",
-      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n19:30:50\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nAgent systems IRL — live triple feature\n\n🤖 robots, live\n★ ★ ★",
+      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n20:28:50\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nAgent systems IRL — live triple feature\n\n🤖 robots, live\n★ ★ ★",
       "links": [],
       "image": "slide-07.jpg"
     },

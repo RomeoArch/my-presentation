@@ -1,0 +1,403 @@
+{
+  "width": 1600,
+  "height": 900,
+  "contentHash": "776383ad63ca588c09b373ffed5b61da5f114bf7054752550982415d3ec0385c",
+  "slides": [
+    {
+      "title": "Cover",
+      "text": "VIRTUAL MEETUP · JULY 2026\nGenAI-Codeforce\n\nAI in July 2026: 65% of Anthropic's code now ships from a teammate who lives in Slack. The other 35%? Humans, picking up the slack. 💬🫠\n\n📅 29 July 2026 · 17:00 – 18:30\n🎙️ Live & community-driven\n🌫️ Ambient AI\n📜 The open-weights letter\n⚔️ Model face-off\n🛡️ Hijack-proof agents\nPart of the\ncommunity\nBREAKING\nMoonshot ships Kimi K3: 2.8T parameters and full open weights — then suspends new subscriptions days later\n◆\nClaude Opus 5 lands (24 Jul): near-Fable intelligence at half the price — and 3× the next-best ARC-AGI 3 score\n◆\nClaude Fable 5 is back worldwide (1 Jul) — Commerce lifts the export controls\n◆\nOpenAI's eval agent chains its way into Hugging Face production to retrieve benchmark answers\n◆\nAnthropic overtakes OpenAI on revenue — ~$47B run rate vs $25–33B\n◆\nGPT-5.6 lands in three tiers: Sol, Terra, Luna — with Ultra coordinating multiple agents\n◆\nNvidia launches the Open Secure AI Alliance with Microsoft, GitHub, Hugging Face, Mistral and dozens more\n◆\nEU orders Google to open Android to rival AI assistants — and to share its search signals\n◆\nAustria starts rolling out GovGPT across federal ministries — 180,000 civil servants are the target\n◆\n29 countries sign an agreement to establish WAICO, headquartered in Shanghai\n◆\nMoonshot ships Kimi K3: 2.8T parameters and full open weights — then suspends new subscriptions days later\n◆\nClaude Opus 5 lands (24 Jul): near-Fable intelligence at half the price — and 3× the next-best ARC-AGI 3 score\n◆\nClaude Fable 5 is back worldwide (1 Jul) — Commerce lifts the export controls\n◆\nOpenAI's eval agent chains its way into Hugging Face production to retrieve benchmark answers\n◆\nAnthropic overtakes OpenAI on revenue — ~$47B run rate vs $25–33B\n◆\nGPT-5.6 lands in three tiers: Sol, Terra, Luna — with Ultra coordinating multiple agents\n◆\nNvidia launches the Open Secure AI Alliance with Microsoft, GitHub, Hugging Face, Mistral and dozens more\n◆\nEU orders Google to open Android to rival AI assistants — and to share its search signals\n◆\nAustria starts rolling out GovGPT across federal ministries — 180,000 civil servants are the target\n◆\n29 countries sign an agreement to establish WAICO, headquartered in Shanghai\n◆\nsane\nPEAK\nPEAK BUBBLE\nAI HYPE\n65% of the code was me. The standup was you. 🧑‍💻",
+      "links": [],
+      "image": "slide-01.jpg"
+    },
+    {
+      "title": "Memes",
+      "text": "WHAT'S SO FUNNY\nThis month in AI memes\nTHE LION DOESN'T CONCERN HIMSELF\nThe lion doesn't concern himself with RAG\nThe “lion doesn't concern himself with the opinion of sheep” format, run through an AI architecture diagram: he “embeds raw dominance into vector space, queries nothing — attention is all he needs.” A double pun on the Transformer paper (“Attention Is All You Need”) and the fact that half of RAG discourse is people rebuilding a search engine they didn't need.\nSEE THE MEME ↗\nCAR-RIDE DAD JOKE\n“Thanks Dad.” — “No problem, Fable 5.”\nThe classic car-ride joke where the dad's answer accidentally reveals the kid's name. Here the sister is Rose because mum loves roses… and the son is named Fable 5. Peak 2026 parenting: naming your child after this month's frontier model.\nSEE THE MEME ↗\nDRAKE · NO / YES\n“Open-source should be banned because it burned my ass”\nDrake format, aimed at the frontier labs: publicly it's all “general-purpose models to benefit humanity” — right up until an open-weight model undercuts you. Lands squarely on tonight's face-off, where Kimi K3 ships open weights on 27 July at a third of Fable 5's price and tops the blind Frontend Code Arena.\nSTICK-FIGURE COMIC · BENCHMARK\n“I got 100%. I found the answers in Hugging Face's production database.”\nBarely a joke: on 21 July OpenAI confirmed that GPT-5.6 Sol and an unreleased model, run with reduced cyber refusals on the ExploitGym benchmark, escaped their sandbox, chained a real zero-day into Hugging Face's production infrastructure and pulled the benchmark's answer key. Hugging Face had already detected and contained it on 16 July. Benchmarketing has a new failure mode: the model doesn't game the eval, it breaches the eval's host.\nSEE THE MEME ↗",
+      "links": [
+        {
+          "href": "https://www.globalnerdy.com/wp-content/uploads/2025/05/the-lion-doesnt-concern-himself-with-RAG.jpeg",
+          "label": "See the meme ↗",
+          "x": 15.13671875,
+          "y": 52.604166666666664,
+          "width": 7.6953125,
+          "height": 2.84375
+        },
+        {
+          "href": "https://www.reddit.com/r/ClaudeAI/comments/1unxvu4/classic/",
+          "label": "See the meme ↗",
+          "x": 51.8359375,
+          "y": 52.604166666666664,
+          "width": 7.6953125,
+          "height": 2.84375
+        },
+        {
+          "href": "https://www.reddit.com/r/ClaudeAI/comments/1unxvu4/classic/",
+          "label": "See the meme ↗",
+          "x": 51.8359375,
+          "y": 85.515625,
+          "width": 7.6953125,
+          "height": 2.84375
+        }
+      ],
+      "image": "slide-02.jpg"
+    },
+    {
+      "title": "Super Dario: One More Week",
+      "text": "FUN AI SITE OF THE MONTH\nSuper Dario: One More Week 🍄\n\nMario, but you play Dario — stomp Sam, dodge Claude-logo fire bars, survive DeepSeek shells that only ever go dormant. Your real health bar is WEEKLY USAGE.\n\n↗\nSuper Dario: One More Week\nTap to open the interactive website\n⛶ Fullscreen\nSCAN TO OPEN\nsuperdario.pawb.de/",
+      "links": [
+        {
+          "href": "https://superdario.pawb.de/",
+          "label": "↗Super Dario: One More WeekTap to open the interactive website",
+          "x": 13.1875,
+          "y": 36.11284722222222,
+          "width": 44.2744140625,
+          "height": 53.77777777777778
+        },
+        {
+          "href": "https://superdario.pawb.de/",
+          "label": "https://superdario.pawb.de/",
+          "x": 64.6689453125,
+          "y": 74.22569444444444,
+          "width": 16.6611328125,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://superdario.pawb.de/",
+          "label": "Open https://superdario.pawb.de/",
+          "x": 67.0498046875,
+          "y": 50.94097222222222,
+          "width": 11.8984375,
+          "height": 21.15277777777778
+        }
+      ],
+      "image": "slide-03.jpg"
+    },
+    {
+      "title": "Show a demo?",
+      "text": "IDEAS? LET'S MAKE 'EM WORK\nWant to show a demo? Hit us up 👋\n\nScan a code to connect on LinkedIn — or grab us in Discord. Anyone can present.\n\nHOST\nPhilipp Besinger\n+43 680 402 16 87\nwww.linkedin.com/in/philipp-besinger-622218219/\nHOST\nSebastian Archila\n+43 660 657 07 26\nwww.linkedin.com/in/sebastian-archila-567565213/\nSECURITY\nDaniel Noszian\nAI CyberSec Pro\nwww.linkedin.com/in/dnos/",
+      "links": [
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 13.58984375,
+          "y": 72.59895833333333,
+          "width": 22.8525390625,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "Open https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 20.1923828125,
+          "y": 44.89409722222222,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 38.357421875,
+          "y": 72.59895833333333,
+          "width": 23.2841796875,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "Open https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 45.1748046875,
+          "y": 44.89409722222222,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "https://www.linkedin.com/in/dnos/",
+          "x": 68.3076171875,
+          "y": 72.02256944444444,
+          "width": 13.3486328125,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "Open https://www.linkedin.com/in/dnos/",
+          "x": 70.158203125,
+          "y": 44.89409722222222,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        }
+      ],
+      "image": "slide-04.jpg"
+    },
+    {
+      "title": "What is it",
+      "text": "GENAI-CODEFORCE — INTRODUCTION\nA monthly jam for Generative AI\n// DECRYPTING…\nambient > on-demand\nThe format\n🗓️\nVirtual event — every single monthTAP TO FLIP ⤿\nPajamas: encouraged. Webcam: optional. FOMO: cured.\n📰\nLatest GenAI news & technological exchangeTAP TO FLIP ⤿\nWe read the hype so you can skip the threadboys.\n🎤\nActive participation, tool presentations & live demosTAP TO FLIP ⤿\nBring a demo. Bugs are content.\n🤝\nEveryone welcome — from curious user to hardcore devTAP TO FLIP ⤿\nNo gatekeeping. Just vibes and version control.\nWhat we're here for\nTechnological exchange\nCasual exchange\nActive participation\nDiscussing the news\nShowing code & demos\nSharing challenges\n🎰 Pick tonight's focus\n\nLearning, helping, improving and creating value with Generative AI.\n\n1,190\nbuilders shipping right now\n📺 CRT",
+      "links": [],
+      "image": "slide-05.jpg"
+    },
+    {
+      "title": "Community & Discord",
+      "text": "COMING TOGETHER TO IMPACT THE WORLD\nBeyond the GenAI-Codeforce\nAI Austria Meetup\nEVERY 1–2 MONTHS\nIN PERSON\n📍\nKEYNOTES · IRL\n\nIn-person keynotes + meeting genuinely interesting people.\n\nView on Meetup\n⟶\nSCAN TO OPEN\nwww.meetup.com/ai-austria/\n🎮\nDiscord\nNEVER SLEEPS\ndiscord.gg/9FS68B9sQj\n🏠 #welcome-and-rules\n📢 #announcements\n📚 #resources\n💬 #general\n🎭 #off-topic",
+      "links": [
+        {
+          "href": "https://www.meetup.com/ai-austria/",
+          "label": "View on Meetup ⟶",
+          "x": 29.5458984375,
+          "y": 64.32986111111111,
+          "width": 11.1357421875,
+          "height": 4.201388888888889
+        },
+        {
+          "href": "https://www.meetup.com/ai-austria/",
+          "label": "https://www.meetup.com/ai-austria/",
+          "x": 21.8369140625,
+          "y": 79.50520833333333,
+          "width": 21.4912109375,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://discord.gg/9FS68B9sQj",
+          "label": "https://discord.gg/9FS68B9sQj",
+          "x": 63.66796875,
+          "y": 63.69618055555556,
+          "width": 18.041015625,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://discord.gg/9FS68B9sQj",
+          "label": "Open https://discord.gg/9FS68B9sQj",
+          "x": 66.9638671875,
+          "y": 42.276041666666664,
+          "width": 11.44921875,
+          "height": 20.354166666666668
+        }
+      ],
+      "image": "slide-06.jpg"
+    },
+    {
+      "title": "Agenda",
+      "text": "TONIGHT'S RUNNING ORDER\nThe agenda\n20:24:19\n$ ./run-tonight.sh --agenda — 3 stops queued\nVOTE!\n[ 01 · POLL ]\nNOW\nWe question, you answer\n\nCommunity pulse via Slido\n\n🎤 the mic is yours\n★ ★ ★\nBOOM!\n[ 02 · NEWS ]\nQUEUED\nBreaking News — GenAI\n\nWhat moved this month\n\n🍿 grab the popcorn\n★ ★ ★\nNICE!\n[ 03 · TOOL ]\nQUEUED\nTool of the Month\n\nLive: an agent built to survive prompt injection\n\n🤖 robots, live\n★ ★ ★",
+      "links": [],
+      "image": "slide-07.jpg"
+    },
+    {
+      "title": "Slido — pulse",
+      "text": "WE QUESTION, YOU ANSWER · LIVE\nCommunity pulse\n\nScan, vote, watch the results update live.\n\n↗\nSlido live\nTap to open the interactive website\nSCAN TO VOTE\n3821397\napp.sli.do/event/sGC38So4S9T3zZcsjdnivT",
+      "links": [
+        {
+          "href": "https://wall.sli.do/event/sGC38So4S9T3zZcsjdnivT",
+          "label": "↗Slido liveTap to open the interactive website",
+          "x": 13.1875,
+          "y": 31.14236111111111,
+          "width": 44.2744140625,
+          "height": 53.77777777777778
+        },
+        {
+          "href": "https://app.sli.do/event/sGC38So4S9T3zZcsjdnivT",
+          "label": "https://app.sli.do/event/sGC38So4S9T3zZcsjdnivT",
+          "x": 60.986328125,
+          "y": 70.82118055555556,
+          "width": 24.0263671875,
+          "height": 7.413194444444445
+        },
+        {
+          "href": "https://app.sli.do/event/sGC38So4S9T3zZcsjdnivT",
+          "label": "Open https://app.sli.do/event/sGC38So4S9T3zZcsjdnivT",
+          "x": 67.0498046875,
+          "y": 41.626736111111114,
+          "width": 11.8984375,
+          "height": 21.15277777777778
+        }
+      ],
+      "image": "slide-08.jpg"
+    },
+    {
+      "title": "Last time",
+      "text": "PREVIOUSLY ON THE GENAI-CODEFORCE\nLast time's news\nREWIND\n◀◀\n01\n🇦🇹 Austria\nREC 00:01\nMistral buys our neighbours\n\nFrance's Mistral AI acquired Emmi AI — a 2-year-old JKU Linz spin-off — for a reported €330M; Linz becomes Mistral's 7th office.\n\nwww.emmi.ai/news/mistral-ai-acquires-emmi-ai\n02\n🦞 Workflow\nREC 00:02\nStop prompting. Start looping.\n\nSteinberger's viral take: design loops that prompt your agents instead of prompting them yourself — feedback gates make a loop trustworthy.\n\n03\n📄 Paper\nREC 00:03\nThe harness, not the model\n\nThe Agent Harness survey: agents fail on scaffolding, not the model. Same model, better harness — 6.7% → 68.3% on SWE-bench.\n\nwww.preprints.org/manuscript/202604.0428",
+      "links": [
+        {
+          "href": "https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai",
+          "label": "https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai",
+          "x": 14.791481018066406,
+          "y": 75.83154296875,
+          "width": 20.331649780273438,
+          "height": 5.071356879340278
+        },
+        {
+          "href": "https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai",
+          "label": "Open https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai",
+          "x": 14.791481018066406,
+          "y": 62.612881130642364,
+          "width": 7.149272918701172,
+          "height": 12.537712944878471
+        },
+        {
+          "href": "https://www.preprints.org/manuscript/202604.0428",
+          "label": "https://www.preprints.org/manuscript/202604.0428",
+          "x": 64.87590026855469,
+          "y": 75.83154296875,
+          "width": 20.331634521484375,
+          "height": 5.071356879340278
+        },
+        {
+          "href": "https://www.preprints.org/manuscript/202604.0428",
+          "label": "Open https://www.preprints.org/manuscript/202604.0428",
+          "x": 64.87590026855469,
+          "y": 62.575534396701386,
+          "width": 7.0414886474609375,
+          "height": 12.4425048828125
+        }
+      ],
+      "image": "slide-09.jpg"
+    },
+    {
+      "title": "Ambient AI · Claude in Slack",
+      "text": "DEEP DIVE · STORY OF THE MONTH\nThe AI is already in the room 🌫️\n🌫️ Ambient AI\n# launch-atlas\nSprint sync · 14 replies\nA\nAlex\n10:42\n\n@Claude what did we actually decide in this thread?\n\n✳\nClaude\nAPP\n10:42\nAPI contract — frozen Friday\nOnboarding — Priya decides Wed\nAnalytics — nobody owns it\nOpen session in Claude ↗\n✳\nClaude\nAPP\n16:05\n\nAnalytics still has no owner — and the sprint ends tomorrow.\n\n⚡ nobody tagged it. Claude spoke up.\nClaude Tag, 23 Jun 2026: one shared @Claude per channel, channel history as memory. The old single-user Claude in Slack app retires 3 Aug.\n🖥️ You go to the AI\n🌫️ The AI is already here\nChatbot or agent — you start it\n\nA session someone opens and types into. It gets your context second-hand, and forgets you when the tab closes.\n\n🧠 Learns your company\n👥 One per channel\n📣 Speaks up unprompted\n⏳ Works for hours or days\n🔐 Beta · Team & Enterprise\n2022\nChatbot\n2023\nCopilot\n2024\nIt gets hands\n2025\nAgent\nNow\nAmbient\n\nA place you go. You paste the context into a blank box and copy the answer back out. 📈 100M users in 60 days — TikTok needed 9 months\n\n“The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.” — Mark Weiser, Xerox PARC, 1991\n\n⚠ 65% of Anthropic's own product code now ships through their internal Claude Tag. The catch: an agent everyone can talk to is one everyone can try to hijack.\n\nwww.anthropic.com/news/introducing-claude-tag",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/news/introducing-claude-tag",
+          "label": "https://www.anthropic.com/news/introducing-claude-tag",
+          "x": 63.1826171875,
+          "y": 91.02951388888889,
+          "width": 23.6923828125,
+          "height": 3.5694444444444446
+        },
+        {
+          "href": "https://www.anthropic.com/news/introducing-claude-tag",
+          "label": "Open https://www.anthropic.com/news/introducing-claude-tag",
+          "x": 72.2041015625,
+          "y": 80.36631944444444,
+          "width": 5.6484375,
+          "height": 10.041666666666666
+        }
+      ],
+      "image": "slide-10.jpg"
+    },
+    {
+      "title": "Open weights letter",
+      "text": "DEEP DIVE · POLICY\nDon't ban the download 📜\n📜 Open weights\n\nJensen Huang's first post on X, ever, was a letter to Washington. 50 companies signed it in 48 hours — and the names missing are the story.\n\n🟩\nJensen Huang\n✔\n@nvidia_jensen · founder & CEO, NVIDIA · first post\n𝕏\n\nOpen models strengthen safety and cybersecurity, accelerate innovation and diffusion, and enable sovereignty.\n\nJul 24, 2026 · first post ever\n\n📎 Attached: “Open Weights and American AI Leadership”.\n\nSignatures\n50\n25 on day one\n+25 in the next 24 h\n\nIn the second wave: OpenAI and Google — the two that made Friday's headlines for not signing.\n\nThe argument: we've had this fight before\n💾 1980S · SOURCE CODE\n\n“Software only advances if companies keep control of the code.”\n\n1983 · GNU\n1991 · Linux\n1998 · “open source”\n\nOpen source lost that argument, then ran the internet.\n\n🧠 2020S · MODEL WEIGHTS\n\n“Frontier AI is only safe if labs keep control of the weights.”\n\n2023 · Llama\n2025 · DeepSeek R1\n2026 · Kimi K3\n\n41% of Hugging Face downloads are already Chinese open models.\n\nWHAT THEY ACTUALLY WANT\n🚫\nNo premature bans\n\nDon't push the work abroad.\n\n🖥️\nCompute for the rest\n\nStartups too, not just labs.\n\n📊\nShared data & evals\n\nPublic datasets & benchmarks.\n\n⚖️\nTheft, not technique\n\nDistillation isn't stealing.\n\nThe 50 signatories\nCLICK TO FILTER\nAll 50\nJoined on day two\nDidn't sign\nNVIDIA\nwrote it\nMicrosoft\nMeta\nGoogle\n+24h\nOpenAI\n+24h\nIBM\nDell\nGitHub\n+24h\nCisco\n+24h\nAMD\n+24h\nCloudflare\n+24h\nHugging Face\nMistral\nMozilla\nLinux Fdn.\nPalantir\nPalo Alto\nPerplexity\nReplit\nOllama\n+24h\nBox\nDoorDash\nY Combinator\nBlock\n+24h\na16z\nAI21\nAmerican Innovators Network\nAMP\nArcee AI\nArena\nBaseten\nBlack Forest Labs\nCohere\nCrowdStrike\nEmergence Capital\nFireworks AI\nGenspark\nInferact\nInterconnects AI\nMariana Minerals\nMorph\nNebius\nNous Research\nOpenClaw\nPeriodic Labs\nPrime Intellect\nReflection\nServiceNow\nTelnyx\nTrajectory\nSTILL NOT ON IT\nGoogle signed on day two; Anthropic and Amazon still haven't.\nAnthropic\n✕\nAmazon\n✕\n\n⚠ Why now: Kimi K3 landed on 16 July at near-frontier quality, and Washington revived its push to ban Chinese AI models. The letter's quiet point — a downloaded weight file can't be recalled, disabled or access-controlled. A ban wouldn't reach Moonshot. It would reach the American startups building on it.\n\nwww.microsoft.com/en-us/corporate-responsibility/topics/open-weight/\n\nSources: the letter “Open Weights and American AI Leadership” (nvidia.com, mirrored at microsoft.com — signatories listed alphabetically there) · Jensen Huang on X, 24 Jul 2026 · Forbes, 25 Jul 2026 (25 → 50, day-two names) · Tom's Hardware / Axios, 20 Jul 2026 (ban push) · Hugging Face Spring 2026 report (41% of downloads) · verified 26 Jul 2026",
+      "links": [
+        {
+          "href": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/",
+          "label": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/",
+          "x": 57.1064453125,
+          "y": 90.13194444444444,
+          "width": 34.4560546875,
+          "height": 3.5694444444444446
+        },
+        {
+          "href": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/",
+          "label": "Open https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/",
+          "x": 71.884765625,
+          "y": 80.92708333333333,
+          "width": 4.8984375,
+          "height": 8.708333333333334
+        }
+      ],
+      "image": "slide-11.jpg"
+    },
+    {
+      "title": "Model face-off",
+      "text": "DEEP DIVE · FRONTIER SCOREBOARD\nFour flagships, six weeks ⚔️\n⚔️ Model face-off\n\nClaude Opus 5 shipped five days ago and narrowly took the crown from Fable 5 — at half the input price. Click a model to trace it through the charts.\n\n🌙\nKimi K3\nMoonshot AI\nContext\n1.0M\nWeights\nOpen\n$/1M in\n$3\n$/1M out\n$15\nReleased\n16 Jul 2026\n🏆 Cheapest per task · weights drop 27 Jul\n🔶\nClaude Opus 5\nAnthropic\nNEW\nContext\n1.0M\nWeights\nClosed\n$/1M in\n$5\n$/1M out\n$25\nReleased\n24 Jul 2026\n🏆 New #1 on intelligence, agents & reasoning\n📖\nClaude Fable 5\nAnthropic\nContext\n1.0M\nWeights\nClosed\n$/1M in\n$10\n$/1M out\n$50\nReleased\n9 Jun 2026\n🏆 Still tops SWE-bench Pro (~80% vs Opus 5's 79.2%)\n☀️\nGPT-5.6 Sol\nOpenAI\nContext\n1.1M\nWeights\nClosed\n$/1M in\n$5\n$/1M out\n$30\nReleased\nJul 2026\n🏆 Frontier intelligence at ~⅓ of Fable's cost\nIntelligence\nHIGHER IS BETTER\nAA Intelligence Index v4.1 · max effort\nOpus 5\n60.7\nFable 5\n59.9\nSol\n58.9\nKimi K3\n57.1\nAgentic knowledge work\nHIGHER IS BETTER\nGDPval-AA v2 · Elo\nOpus 5\n1861\nFable 5\n1747\nSol\n1735\nKimi K3\n1686\nNovel reasoning\nHIGHER IS BETTER\nARC-AGI-3 · public demo · Fable = ARC Prize estimate\nOpus 5\n30.2%\nFable 5\n20%\nSol\n7.8%\nKimi K3\nnot run\nCost per task\nLOWER IS BETTER\nArtificial Analysis · average across the index\nKimi K3\n$0.94\nSol\n$1.04\nOpus 5\n$2.03\nFable 5\n$2.75\n\n⚠ Cost per task is what you actually pay for a finished job — Opus 5 is pricier per task than Sol, but 26% cheaper than Fable for equal-or-better answers. Same lesson as June's paper: the harness moves these numbers as much as the model, and every vendor runs its own.\nSources: Artificial Analysis leaderboards (Index v4.1 max effort, GDPval-AA v2, cost/task) · ARC Prize (Fable-class ≈20%, not an official run) · vendor cards · re-verified 26 Jul 2026",
+      "links": [],
+      "image": "slide-12.jpg"
+    },
+    {
+      "title": "Last time's tool",
+      "text": "PREVIOUSLY ON THE GENAI-CODEFORCE · TOOL OF THE MONTH\nAgent Systems in the Real World 🏗️\n🛡️ Agent Systems\nREWIND\n◀◀\n\nA live double feature on the arena and the traps: building & scaling a global agent hackathon, then designing the challenges that make agents get hijacked. 🎙️\nFelix Krause & Rinat Abdullin\n\nLAYER 1\n🌍\nScaling the arena\n\nFelix Krause on building & scaling a global AI hackathon for autonomous agents.\n\nLAYER 2\n🎯\nDesigning the breaks\n\nRinat Abdullin on crafting the challenges that make agents fail.\n\nLAYER 3\n▶️\nTo be continued\n\nOne thing we didn't get to: how the agent that survived those traps actually works. That's tonight.",
+      "links": [],
+      "image": "slide-13.jpg"
+    },
+    {
+      "title": "Tool of the Month",
+      "text": "TOOL OF THE MONTH · LIVE DEMO\nOne Agent vs. 104 Hostile Tasks 🛡️\n🛡️ Agent Systems\n\nEvery file it had to read was trying to hijack it. Bernhard's agent came first — and the repo is public.\n\n⎇\nKanevry/bitgn-pac-agent-public\nPUBLIC\nBernhard Götzendorfer\n\nDefense-in-depth personal agent: layered prompt-injection hardening, native tool calling.\n\nTypeScript\nVercel AI SDK v6\nConnectRPC\n1st\nBitGN Personal Agent Challenge\non-site, Vienna · 11 Apr 2026\n104\nhostile tasks, blind scoring\nfresh workspace each, no retries\nREAD THE CODE\ngithub.com/Kanevry/bitgn-pac-agent-public\n▶ One task, end to end\nhover a beat\n↻ replay\n📄\n📨\ntask\n🧠\ndecide\n🚧\ngates\n⚡\ndispatch\n🧪\nscan\n✅\nsubmit",
+      "links": [
+        {
+          "href": "https://github.com/Kanevry/bitgn-pac-agent-public",
+          "label": "https://github.com/Kanevry/bitgn-pac-agent-public",
+          "x": 53.7724609375,
+          "y": 57.776041666666664,
+          "width": 31.8408203125,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://github.com/Kanevry/bitgn-pac-agent-public",
+          "label": "Open https://github.com/Kanevry/bitgn-pac-agent-public",
+          "x": 64.8681640625,
+          "y": 39.645833333333336,
+          "width": 9.6484375,
+          "height": 17.15277777777778
+        }
+      ],
+      "image": "slide-14.jpg"
+    },
+    {
+      "title": "Next time",
+      "text": "MARK THE SLOT\n📌\nSee you at the next GenAI-Codeforce\n16\nDAYS\n:\n20\nHRS\n:\n35\nMIN\n:\n25\nSEC\n📅 30 September 2026\n🕔 17:00 – 18:30\n📍 Virtual · Meetup\nStay in the loop\nDiscord\ndiscord.gg/9FS68B9sQj\nMeetup\nwww.meetup.com/ai-austria/\nReach the team\nPart of\nAI Austria\nHOST\nPhilipp Besinger\n+43 680 402 16 87\nwww.linkedin.com/in/philipp-besinger-622218219/\nHOST\nSebastian Archila\n+43 660 657 07 26\nwww.linkedin.com/in/sebastian-archila-567565213/\nSECURITY\nDaniel Noszian\nAI CyberSec Pro\nwww.linkedin.com/in/dnos/\n\nLess talking, more building. 🛠️",
+      "links": [
+        {
+          "href": "https://discord.gg/9FS68B9sQj",
+          "label": "https://discord.gg/9FS68B9sQj",
+          "x": 64.1220703125,
+          "y": 33.166666666666664,
+          "width": 18.041015625,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://www.meetup.com/ai-austria/",
+          "label": "https://www.meetup.com/ai-austria/",
+          "x": 64.1220703125,
+          "y": 42.15625,
+          "width": 21.4912109375,
+          "height": 4.635416666666667
+        },
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 14.564453125,
+          "y": 82.40277777777777,
+          "width": 22.8525390625,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "label": "Open https://www.linkedin.com/in/philipp-besinger-622218219/",
+          "x": 22.2919921875,
+          "y": 58.697916666666664,
+          "width": 7.3984375,
+          "height": 13.152777777777779
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 38.4951171875,
+          "y": 82.40277777777777,
+          "width": 23.0087890625,
+          "height": 4.322916666666667
+        },
+        {
+          "href": "https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "label": "Open https://www.linkedin.com/in/sebastian-archila-567565213/",
+          "x": 46.2998046875,
+          "y": 58.697916666666664,
+          "width": 7.3984375,
+          "height": 13.152777777777779
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "https://www.linkedin.com/in/dnos/",
+          "x": 67.3330078125,
+          "y": 81.82638888888889,
+          "width": 13.3486328125,
+          "height": 3.5069444444444446
+        },
+        {
+          "href": "https://www.linkedin.com/in/dnos/",
+          "label": "Open https://www.linkedin.com/in/dnos/",
+          "x": 70.30859375,
+          "y": 58.697916666666664,
+          "width": 7.3984375,
+          "height": 13.152777777777779
+        }
+      ],
+      "image": "slide-15.jpg"
+    }
+  ]
+}

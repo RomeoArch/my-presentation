@@ -7,6 +7,8 @@ import path from 'node:path';
 import { deckContentHash } from './deck-content-hash.mjs';
 
 const root = path.resolve(fileURLToPath(new URL('../public/', import.meta.url)));
+const requestedEdition = process.argv[2];
+if (requestedEdition && !/^\d{4}-\d{2}$/.test(requestedEdition)) throw new Error('Use an edition such as 2026-07.');
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 const server = createServer(async (req, res) => {
 	try {
@@ -22,7 +24,7 @@ let browser;
 try {
 	browser = await chromium.launch(process.platform === 'win32' ? { channel: 'msedge' } : {});
 	const page = await browser.newPage({ viewport: { width: 1600, height: 900 }, deviceScaleFactor: 1 });
-	for (const id of await readdir(path.join(root, 'decks'))) {
+	for (const id of requestedEdition ? [requestedEdition] : await readdir(path.join(root, 'decks'))) {
 		if (!/^\d{4}-\d{2}$/.test(id)) continue;
 		const output = path.join(root, 'decks', '_mobile', id);
 		await mkdir(output, { recursive: true });

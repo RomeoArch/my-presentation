@@ -13,6 +13,7 @@ slide widgets. External website embeds become styled links during capture.
 Run `npm run capture-decks` after changing a deck's content, styles, assets, or
 engine. It uses Playwright with installed Edge on Windows; on Linux install its
 browser first with `npx playwright install --with-deps chromium`.
+To capture only one edition, use `npm run capture-decks -- 2026-07`.
 
 Commit `public/decks/_mobile/<edition>/` alongside the archive. `npm run build`
 validates that image files exist and the content hash matches, without needing a

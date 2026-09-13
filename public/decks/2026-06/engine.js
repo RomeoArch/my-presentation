@@ -945,9 +945,24 @@
   function initLightbox() {
     const lb = $("#lightbox"), img = $("#lightbox img");
     const cap = $(".lb-cap", lb), capT = $(".lb-cap__t", lb), capB = $(".lb-cap__b", lb);
+    // Text meme cards (.meme--told) have no image to enlarge — the lightbox shows
+    // a bigger copy of the card instead, so the blurb is readable from the back
+    // of the room. Built lazily so index.html's lightbox markup stays unchanged.
+    let card = null;
     document.addEventListener("click", e => {
+      if (e.target.closest("a")) return;   // "See the meme" opens its link, not the lightbox
+      const told = e.target.closest(".meme--told");
+      if (told) {
+        if (!card) { card = document.createElement("div"); card.className = "lb-card panel"; img.after(card); }
+        card.innerHTML = told.innerHTML;
+        img.hidden = true; cap.hidden = true; card.hidden = false;
+        lb.classList.add("open");
+        return;
+      }
       const m = e.target.closest(".meme[data-full], .zoom[data-full]");
       if (!m) return;
+      if (card) card.hidden = true;
+      img.hidden = false;
       img.src = m.dataset.full;
       const title = m.dataset.caption || "", body = m.dataset.explain || "";
       capT.textContent = title; capB.textContent = body;

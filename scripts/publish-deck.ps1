@@ -66,7 +66,7 @@ foreach ($slug in $editions) {
   # (robots.txt can't do this job - it's only read from the domain root, and the
   # site is served from the /my-presentation/ subpath.)
   $indexPath = Join-Path $target 'index.html'
-  $html = Get-Content $indexPath -Raw
+  $html = Get-Content $indexPath -Raw -Encoding UTF8
   if ($html -notmatch '(?i)name\s*=\s*"robots"') {
     $tag = '  <meta name="robots" content="noindex, nofollow, noimageindex, noarchive">'
     $html = [regex]::Replace(
@@ -75,7 +75,7 @@ foreach ($slug in $editions) {
       "`$1`r`n$tag",
       [System.Text.RegularExpressions.RegexOptions]::None,
       [timespan]::FromSeconds(5))
-    Set-Content $indexPath $html -NoNewline -Encoding utf8
+    [System.IO.File]::WriteAllText($indexPath, $html, [System.Text.UTF8Encoding]::new($false))
     Write-Host "  + injected noindex meta tag" -ForegroundColor DarkGray
   }
 
@@ -96,7 +96,7 @@ foreach ($slug in $editions) {
       "`r`n$lite`$1",
       [System.Text.RegularExpressions.RegexOptions]::None,
       [timespan]::FromSeconds(5))
-    Set-Content $indexPath $html -NoNewline -Encoding utf8
+    [System.IO.File]::WriteAllText($indexPath, $html, [System.Text.UTF8Encoding]::new($false))
     Write-Host "  + injected mobile lite mode" -ForegroundColor DarkGray
   }
 

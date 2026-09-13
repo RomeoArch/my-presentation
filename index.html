@@ -50,8 +50,9 @@
 				</button>
 
 				<div class="dropdown__menu" role="menu">
-					<a class="dropdown__item" href="#last-meetup" role="menuitem">June</a>
-					<a class="dropdown__item" href="https://www.meetup.com/ai-austria/events/315488910/?eventOrigin=group_events_list" role="menuitem" target="_blank" rel="noopener noreferrer">July</a>
+					<a class="dropdown__item" href="#last-meetup" role="menuitem" data-deck-link="2026-06">June</a>
+					<a class="dropdown__item" href="#last-meetup" role="menuitem" data-deck-link="2026-07">July</a>
+					<a class="dropdown__item" href="https://www.meetup.com/ai-austria/events/316278162/?eventOrigin=group_events_list" role="menuitem" target="_blank" rel="noopener noreferrer">September</a>
 				</div>
 			</div>
 
@@ -126,14 +127,19 @@
 			</p>
 
 			<div class="hero__actions">
-				<a href="https://www.meetup.com/ai-austria/events/?type=past" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
-					Join Meetup →
+				<a href="https://www.meetup.com/ai-austria/events/316278162/?eventOrigin=group_events_list" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+					Join Meetup September
 				</a>
 
 				<a href="#last-meetup" class="btn btn--secondary">
-					View Slides
+					View Last Presentation
 				</a>
 			</div>
+
+			<p class="hero__next">
+				Next meetup:
+				<time datetime="2026-09-30T17:00:00+02:00">Wednesday, Sep 30 · 5:00 PM to 6:30 PM CEST</time>
+			</p>
 
 		</div>
 
@@ -264,13 +270,15 @@
 
 				<!-- One button per archived deck in public/decks/<data-deck>/ -->
 				<div class="deck-tabs" data-deck-tabs>
-					<button type="button" class="deck-tab is-active" aria-pressed="true" data-deck="2026-06"
+					<button type="button" class="deck-tab" aria-pressed="false" data-deck="2026-06"
 						data-deck-label="June 2026">June 2026</button>
+					<button type="button" class="deck-tab is-active" aria-pressed="true" data-deck="2026-07"
+						data-deck-label="July 2026">July 2026</button>
 				</div>
 
 				<!-- Relative, and rewritten by main.js for the active deck: an
 				     absolute /decks/... breaks under the GitHub Pages subpath. -->
-				<a class="deck-open" href="decks/2026-06/index.html" target="_blank" rel="noopener noreferrer"
+				<a class="deck-open" href="decks/2026-07/index.html" target="_blank" rel="noopener noreferrer"
 					data-deck-open>Open fullscreen ↗</a>
 
 			</div>
@@ -290,7 +298,7 @@
 					     link pointed at the selected edition. -->
 					<div class="deck-stage__poster" data-deck-poster>
 						<p class="deck-stage__poster-text">Open the presentation to browse the slides. On phones, a lightweight viewer keeps things smooth.</p>
-						<a class="deck-stage__poster-link" href="decks/2026-06/index.html" target="_blank"
+						<a class="deck-stage__poster-link" href="decks/2026-07/index.html" target="_blank"
 							rel="noopener noreferrer" data-deck-poster-link>Open the deck ↗</a>
 					</div>
 
