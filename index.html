@@ -282,14 +282,14 @@
 					     the scrollbars would eat into the slide layout. -->
 					<iframe class="deck-stage__frame" data-deck-frame title="Codeforce deck" scrolling="no"
 						allowfullscreen></iframe>
-					<p class="deck-stage__placeholder">Loading deck…</p>
+					<p class="deck-stage__placeholder" role="status">Loading deck…</p>
 
 					<!-- Phones and tablets never mount the iframe — the embedded deck is a
 					     full 1600x900 document and iOS Safari kills the tab over it (see
 					     main.js). They get this instead; main.js unhides it and keeps the
 					     link pointed at the selected edition. -->
-					<div class="deck-stage__poster" data-deck-poster hidden>
-						<p class="deck-stage__poster-text">The deck is a full-screen presentation — it runs best on its own.</p>
+					<div class="deck-stage__poster" data-deck-poster>
+						<p class="deck-stage__poster-text">Open the presentation to browse the slides. On phones, a lightweight viewer keeps things smooth.</p>
 						<a class="deck-stage__poster-link" href="decks/2026-06/index.html" target="_blank"
 							rel="noopener noreferrer" data-deck-poster-link>Open the deck ↗</a>
 					</div>

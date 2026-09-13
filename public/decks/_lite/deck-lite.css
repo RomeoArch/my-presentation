@@ -43,3 +43,35 @@ html[data-lite] *{
 /* ---- 4. No blended grain ------------------------------------------------- */
 /* mix-blend-mode pulls the whole background stack into a single blend group. */
 html[data-lite] .bg__noise{display:none}
+
+/* ---- 5. Touch navigation, including the cover --------------------------- */
+/* The original cover hides the keyboard hint containing the only arrows.
+   Keep those real engine controls visible and clear of Safari's home bar. */
+html[data-lite] .hint{
+	display:flex!important;
+	bottom:calc(12px + env(safe-area-inset-bottom, 0px));
+	right:16px;
+	padding:6px;
+	border-radius:12px;
+	background:var(--bg-2);
+	opacity:1;
+}
+html[data-lite] .hint .kbd{min-width:44px;min-height:44px;touch-action:manipulation}
+html[data-lite] .hint > span{display:none}
+html[data-lite] .slide{
+	padding-bottom:calc(100px + env(safe-area-inset-bottom, 0px));
+	-webkit-overflow-scrolling:touch;
+}
+html[data-lite] *,
+html[data-lite] *::before,
+html[data-lite] *::after{
+	animation:none!important;
+	transition:none!important;
+}
+
+@media (max-width:600px){
+	html[data-lite] .news,
+	html[data-lite] .memes,
+	html[data-lite] .people--row,
+	html[data-lite] .flips{grid-template-columns:1fr}
+}

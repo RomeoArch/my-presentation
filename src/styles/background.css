@@ -208,7 +208,8 @@
 @media (max-width: 768px) {
 
 	.bg__blob {
-		filter: blur(70px);
+		/* Avoid large off-screen blur surfaces on iPhone Safari. */
+		display: none;
 		animation: none;
 	}
 

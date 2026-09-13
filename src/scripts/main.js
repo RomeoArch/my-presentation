@@ -84,6 +84,9 @@
 	if (deckStage && deckFrame) {
 		const DECK_WIDTH = 1600;
 		let mounted = false;
+		let readinessTimer;
+		let loadDeadline;
+		let requestedUrl;
 
 		// Phones do not get the embed. --deck-scale is a paint-time transform:
 		// the iframe still renders a full 1600x900 document, and the deck keeps
@@ -96,11 +99,40 @@
 		// touch screens get a poster that opens it full-screen in its own tab.
 		const canEmbed = !window.matchMedia("(max-width: 1024px), (pointer: coarse)").matches;
 
-		// BASE_URL is "/" locally and "/my-presentation/" on GitHub Pages (see
-		// vite.config.js). It always ends in a slash. A hardcoded "/decks/..."
-		// would escape the project subpath on Pages and 404.
+		// Vite supplies BASE_URL in development and production. If a static host
+		// accidentally serves the source checkout, resolve public/ relative to
+		// this module instead of throwing before the mobile fallback can start.
 		function deckUrl(id) {
-			return import.meta.env.BASE_URL + "decks/" + id + "/index.html";
+			const base = import.meta.env?.BASE_URL || new URL(/* @vite-ignore */ "../../public/", import.meta.url).href;
+			return base + "decks/" + encodeURIComponent(id) + "/index.html";
+		}
+
+		function finishLoading(ready) {
+			clearInterval(readinessTimer);
+			deckStage.classList.remove("is-loading");
+			deckStage.classList.toggle("is-loaded", ready);
+			deckStage.classList.toggle("is-poster", !ready);
+			deckStage.setAttribute("aria-busy", "false");
+			if (deckPoster) deckPoster.hidden = ready;
+			if (!ready) {
+				mounted = false; // Clicking the selected edition retries the load.
+				deckFrame.removeAttribute("src");
+				const message = deckPoster && deckPoster.querySelector("p");
+				if (message) message.textContent = "The preview could not load. Open the deck directly, or select the month to retry.";
+			}
+		}
+
+		function checkDeckReady() {
+			try {
+				const doc = deckFrame.contentDocument;
+				// The deck adds #1 (and subsequent slide numbers) during boot.
+				if (doc && doc.URL.split("#")[0] === requestedUrl && doc.querySelector(".slide.active")) {
+					hideDeckScrollbars();
+					finishLoading(true);
+					return;
+				}
+			} catch (error) { /* The deadline also handles inaccessible frames. */ }
+			if (Date.now() >= loadDeadline) finishLoading(false);
 		}
 
 		function fitDeck() {
@@ -167,8 +199,9 @@
 				other.setAttribute("aria-pressed", String(isActive));
 			});
 
-			if (deckOpen) deckOpen.href = deckUrl(id);
-			if (deckPosterLink) deckPosterLink.href = deckUrl(id);
+			const url = deckUrl(id) + (canEmbed ? "" : "?lite=1");
+			if (deckOpen) deckOpen.href = url;
+			if (deckPosterLink) deckPosterLink.href = url;
 		}
 
 		function showDeck(tab) {
@@ -179,9 +212,16 @@
 
 			if (!canEmbed) return;
 
-			deckFrame.src = deckUrl(id);
+			clearInterval(readinessTimer);
+			deckStage.classList.remove("is-loaded", "is-poster");
+			deckStage.classList.add("is-loading");
+			deckStage.setAttribute("aria-busy", "true");
+			if (deckPoster) deckPoster.hidden = true;
+			requestedUrl = new URL(deckUrl(id), document.baseURI).href;
+			deckFrame.src = requestedUrl;
 			deckFrame.title = "Codeforce deck — " + label;
-			deckStage.classList.add("is-loaded");
+			loadDeadline = Date.now() + 15000;
+			readinessTimer = setInterval(checkDeckReady, 200);
 
 			mounted = true;
 			fitDeck();

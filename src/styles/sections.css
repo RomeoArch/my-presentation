@@ -133,6 +133,7 @@
 }
 
 .deck-stage__frame {
+	visibility: hidden;
 	position: absolute;
 
 	top: 0;
@@ -152,7 +153,7 @@
 
 	inset: 0;
 
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 
@@ -164,6 +165,18 @@
 }
 
 /* Once the deck is in the frame the placeholder is no longer needed. */
+.deck-stage.is-loading .deck-stage__placeholder {
+	display: flex;
+}
+
+.deck-stage.is-loaded .deck-stage__frame {
+	visibility: visible;
+}
+
+.deck-stage.is-poster {
+	min-height: 220px;
+}
+
 .deck-stage.is-loaded .deck-stage__placeholder {
 	display: none;
 }
